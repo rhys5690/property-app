@@ -1,0 +1,15 @@
+<p><%= @suburb.name %></p>
+
+<% if @bedrooms == 2 %>
+
+  <%= @prices * 2  %>
+
+<% elsif @bedrooms == 1 %>
+
+  <%= @prices %>
+
+<% else %>
+
+  <%= @prices * 3 %>
+
+<% end %>
