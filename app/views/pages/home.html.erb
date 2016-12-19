@@ -22,4 +22,22 @@
 <p>Veniam voluptate in ut ad nulla maxime est earum, consequatur eos praesentium labore accusamus odio, eaque quaerat libero quae temporibus. Beatae ut rem accusamus sed, deserunt numquam quis nesciunt amet.</p>
 <p>Mollitia nesciunt totam repellendus et vel laudantium harum aspernatur minus, perspiciatis ullam porro quia modi, dolore exercitationem labore odio nulla ipsum facilis autem cum asperiores id. Facere perferendis totam officiis.</p>
 
-<%= render :partial => 'form' %>
+<button class="Value-My-Property">Value My Property</button>
+
+<div class="enter-suburb form">
+<%= form_tag("/search", method: "get") do %>
+  <%= label_tag("Enter your suburb") %>
+  <%= text_field_tag(:suburb) %>
+  <%= submit_tag("Next") %>
+<% end %>
+</div>
+
+<div class="end-div">
+  <br>
+  <br>
+  <br>
+  <br>
+</div>
+
+
+<!-- <%= render :partial => 'form' %> -->
