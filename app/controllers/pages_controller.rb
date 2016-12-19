@@ -32,6 +32,8 @@ class PagesController < ApplicationController
 
     @all_suburbs = Suburb.all
 
+    
+
 
 
     # binding.pry
