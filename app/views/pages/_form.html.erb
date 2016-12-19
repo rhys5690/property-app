@@ -1,0 +1,42 @@
+
+
+<%#= form_for @suburb do |f| %>
+  <p>
+    <%#= f.label :suburb %>
+    <%#= f.text_field :suburb, :required => true %>
+  </p>
+  <p>
+    <%#= f.label :postcode %>
+    <%#= f.text_field :postcode, :required => true %>
+  </p>
+  <p>
+
+
+    <%#= f.label :password %>
+    <%#= f.password_field :password, :required => true %>
+  </p>
+  <p>
+    <%#= f.label :password_confirmation %>
+    <%#= f.password_field :password_confirmation, :required => true %>
+  </p>
+
+
+  <%#= f.submit %>
+<%# end %>
+
+
+<%= form_tag("/search", method: "get") do %>
+  <%= label_tag("Enter your suburb") %>
+  <%= text_field_tag(:suburb) %>
+
+  <%= label_tag("Enter the number of bedrooms") %>
+  <%= text_field_tag(:bedrooms) %>
+
+  <%= label_tag("Distance from nearest public transport") %>
+  <%= text_field_tag(:distance_from_transport) %>  
+
+  <%= label_tag("Enter your email address") %>
+  <%= email_field_tag(:email) %>
+
+  <%= submit_tag("Search") %>
+<% end %>
