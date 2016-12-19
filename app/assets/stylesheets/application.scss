@@ -1,0 +1,49 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+// @import 'foundation';
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-image: url("http://res.cloudinary.com/esthertan/image/upload/c_scale,h_1200,w_1959/v1482117970/stairs-home-loft-lifestyle_kxovm4.jpg");
+  background-size: cover;
+}
+
+h1 {
+  margin-top: 30px;
+  text-align: center;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 30px;
+  font-style: bold;
+}
+
+p {
+  color: red;
+  text-align: center;
+  font-style: bold;
+}
+
+.column .column-block {
+  margin: 0 auto;
+}
+
+// img.Australian.stats.section.1 {
+//
+//   position: relative;
+//   border-width: 1px 0 0 1px;
+//   border-style: solid red;
+//   float: right;
+// }
