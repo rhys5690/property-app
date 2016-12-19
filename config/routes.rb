@@ -6,4 +6,6 @@ Rails.application.routes.draw do
   get '/index' => 'prices#index'
   get '/search' => 'pages#search'
 
+
+
 end
