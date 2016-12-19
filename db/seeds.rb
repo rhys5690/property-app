@@ -21,7 +21,7 @@ p1 = Price.create( {
   :month => "D250",
   :year => "Sydney",
   :mean_b2 => 1375000,
-  :mean_b3 => 1770000
-  :mean_b4 => 2350000
+  :mean_b3 => 1770000,
+  :mean_b4 => 2350000,
   :suburb_id => s1.id
 } )
