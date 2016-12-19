@@ -13,7 +13,7 @@
  *= require_tree .
  *= require_self
  */
-@import 'foundation';
+
 
 body {
   font-family: 'Montserrat', sans-serif;
@@ -41,7 +41,7 @@ p {
 }
 
 img.Australian.stats.section.1 {
-  
+
   position: relative;
   border-width: 1px 0 0 1px;
   border-style: solid red;
