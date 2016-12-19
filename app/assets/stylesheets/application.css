@@ -14,3 +14,28 @@
  *= require_self
  */
 @import 'foundation';
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-image: url("http://res.cloudinary.com/esthertan/image/upload/c_scale,h_1200,w_1959/v1482117970/stairs-home-loft-lifestyle_kxovm4.jpg");
+  background-size: cover;
+}
+
+h1 {
+  margin-top: 30px;
+  text-align: center;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 30px;
+  font-style: bold;
+}
+
+p {
+  color: red;
+  text-align: center;
+  font-style: bold;
+}
+
+.column .column-block {
+  margin: 0 auto;
+}
