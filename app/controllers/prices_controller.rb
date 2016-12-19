@@ -1,7 +1,12 @@
 class PricesController < ApplicationController
 
   def index
-    @all_prices = Suburb.all
-    binding.pry
+    @all_prices = Price.all
+
+    respond_to do |format|
+      format.html {}
+      format.json { render :json => @all_prices }
+    end
+
   end
 end
