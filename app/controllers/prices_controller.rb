@@ -1,0 +1,3 @@
+class PricesController < ApplicationController
+  
+end
