@@ -18,10 +18,37 @@ s1 = Suburb.create( {
 } )
 
 p1 = Price.create( {
-  :month => "D250",
-  :year => "Sydney",
+  :month => "Dec",
+  :year => "2016",
   :mean_b2 => 1375000,
   :mean_b3 => 1770000,
+  :mean_b4 => 2350000,
+  :suburb_id => s1.id
+} )
+
+p2 = Price.create( {
+  :month => "Nov",
+  :year => "2016",
+  :mean_b2 => 1375000,
+  :mean_b3 => 1764000,
+  :mean_b4 => 2350000,
+  :suburb_id => s1.id
+} )
+
+p3 = Price.create( {
+  :month => "Oct",
+  :year => "2016",
+  :mean_b2 => 1375000,
+  :mean_b3 => 1760000,
+  :mean_b4 => 2350000,
+  :suburb_id => s1.id
+} )
+
+p4 = Price.create( {
+  :month => "Sep",
+  :year => "2016",
+  :mean_b2 => 1375000,
+  :mean_b3 => 1755000,
   :mean_b4 => 2350000,
   :suburb_id => s1.id
 } )
