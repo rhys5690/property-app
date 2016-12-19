@@ -2,6 +2,6 @@ Rails.application.routes.draw do
 
   root :to => 'pages#home'
     get '/home' => 'pages#home'
-    get '/index' => 'prices#index' 
+    get '/index' => 'prices#index'
 
 end
