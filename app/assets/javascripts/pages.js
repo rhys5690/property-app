@@ -157,6 +157,15 @@ function animateEmotion(){
 }
 animateEmotion();
 
+function animateEmotionInvestor(){
+  // $("#happy-face").css("margin-top","0");
+  $(".investor-face").animate({marginTop:+10}, 1000, function(){
+      $(".investor-face").animate({marginTop:0},1000,animateEmotionInvestor);
+  });
+
+}
+animateEmotionInvestor();
+
 
 
 // --------- End of Global Emotion Section ------------------------
