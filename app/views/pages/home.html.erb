@@ -12,21 +12,45 @@
     <div class="enter-suburb form none">
 
     <%= form_tag("/search", method: "get") do %>
-      <%= label_tag("Enter your suburb") %>
+      <%= label_tag("Enter the property's suburb name") %>
       <%= text_field_tag(:suburb) %>
       <%= button_tag("Next", :class => "first_phase") %>
     </div>
 
-    <div class="enter-bedrooms form none">
-      <%= label_tag("Enter your number of bedrooms") %>
-      <%= text_field_tag(:bedrooms) %>
+    <div class="enter-street-name form none">
+      <%= label_tag("Enter the property's street name") %>
+      <%= text_field_tag(:street_name) %>
       <%= button_tag("Next", :class => "second_phase") %>
     </div>
 
-    <div class="enter-distance form none">
-      <%= label_tag("Enter your distance from public transport") %>
-      <%= text_field_tag(:distance_from_transport) %>
+    <div class="enter-house-number form none">
+      <%= label_tag("Enter the property's house number") %>
+      <%= text_field_tag(:house_number) %>
       <%= button_tag("Next", :class => "third_phase") %>
+    </div>
+
+    <div class="enter-bedrooms form none">
+      <%= label_tag("Enter the number of bedrooms") %>
+      <%= text_field_tag(:bedrooms) %>
+      <%= button_tag("Next", :class => "fourth_phase") %>
+    </div>
+
+    <div class="enter-distance form none">
+      <%= label_tag("Enter the distance of the property from public transport in kms") %>
+      <%= text_field_tag(:distance_from_transport) %>
+      <%= button_tag("Next", :class => "fifth_phase") %>
+    </div>
+
+    <div class="enter-bathrooms form none">
+      <%= label_tag("Enter the number of bathrooms") %>
+      <%= text_field_tag(:bathrooms) %>
+      <%= button_tag("Next", :class => "sixth_phase") %>
+    </div>
+
+    <div class="enter-square-meters form none">
+      <%= label_tag("Enter the number of square meters") %>
+      <%= text_field_tag(:square_meters) %>
+      <%= button_tag("Next", :class => "seventh_phase") %>
     </div>
 
     <div class="enter-email form none">
@@ -42,6 +66,48 @@
 
 <div class="global-stats">
   <h3>Global Stats section</h3>
+
+  <!-- ================== start of first row ================ -->
+
+  <div class="row">
+    <div class="col s4 global-stats-box">
+      <p class="global-stats-label">Current Average Price Sydney </p>
+      <p id="global-current-price">
+        $<%= number_with_delimiter(@current_month_average*0.7, :precision => 0, :delimiter => ",") %>
+      </p>
+    </div>
+    <div class="col s4 global-stats-box">
+      <p class="global-stats-label">Projected Growth Rate</p>
+      <p>
+        <%= number_with_precision(@projected_growth_percentage, :precision => 3, :delimiter => ",") %>%
+      </p>
+    </div>
+    <div class="col s4 global-stats-box">
+      <p class="global-stats-label"> Next Month Projected Value</p>
+      <p>
+        $<%= number_with_precision(@projected_growth_value*0.7, :precision => 0, :delimiter => ",") %>
+      </p>
+    </div>
+  </div>
+
+  <!-- ================== end of first row ================ -->
+  <!-- ================== start of second row ================ -->
+  <div class="row">
+    <div class="col s4 global-suburb-list">
+      <p class="global-stats-label">Price by Suburb</p>
+      <% @suburb_price_history_array.each do |suburb| %>
+        <p><%= "#{suburb[0][0]} - $#{suburb[0][1]}" %></p>
+      <% end %>
+    </div>
+
+  </div>
+
+  <!-- ================== end of second row ================ -->
+
+
+
+
+
 
 </div>
 
