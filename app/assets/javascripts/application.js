@@ -14,13 +14,3 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-
-function imgToCanvas(){
-	var c = document.getElementById('c');
-	c.height = 197;
-	c.width = 320;
-	var cx = c.getContext('2d');
-	cx.fillStyle="rgba(0,0,0,0)";
-	cx.fillRect(0,0,1,1);
-	cx.fillRect(1,0,1,1);
-}

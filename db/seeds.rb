@@ -52,3 +52,37 @@ p4 = Price.create( {
   :mean_b4 => 2350000,
   :suburb_id => s1.id
 } )
+
+
+s2 = Suburb.create( {
+  :name => "Leichhardt",
+  :postcode => "2040",
+  :latitude => "33.8589° S",
+  :longitude => "151.1791° E"
+
+} )
+
+p5 = Price.create( {
+  :month => "Dec",
+  :year => "2016",
+  :mean_b2 => 1190000,
+  :mean_b3 => 1499980,
+  :mean_b4 => 1625000,
+  :suburb_id => s2.id
+} )
+p6 = Price.create( {
+  :month => "Nov",
+  :year => "2016",
+  :mean_b2 => 1375000,
+  :mean_b3 => 1326000,
+  :mean_b4 => 2350000,
+  :suburb_id => s2.id
+} )
+p7 = Price.create( {
+  :month => "Sep",
+  :year => "2016",
+  :mean_b2 => 1375000,
+  :mean_b3 => 1316500,
+  :mean_b4 => 2350000,
+  :suburb_id => s2.id
+} )
