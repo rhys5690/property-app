@@ -38,11 +38,21 @@ class PagesController < ApplicationController
 
     end
 
+    # Find the global current month average price
 
-    @projected_growth_percentage = @average_all_suburbs
+    @previous_month_average_array = Price.where({:month => "Nov"}).pluck(:mean_b3)
+    @previous_month_average = @previous_month_average_array.reduce(:+)/ (@previous_month_average_array.count)
 
+    # Find the global previous month average price
+    @current_month_average_array = Price.where({:month => "Dec"}).pluck(:mean_b3)
+    @current_month_average = @current_month_average_array.reduce(:+)/ (@current_month_average_array.count)
 
+    # Find the global next month projection
+    @projected_growth_percentage = (@current_month_average.to_f - @previous_month_average)/ @previous_month_average * 100
 
+    @projected_growth_value = @current_month_average * (@projected_growth_percentage/100 +1)
+
+    
 
 
   end
