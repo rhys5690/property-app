@@ -101,7 +101,7 @@ p.global-stats-label {
 // -------- start of local stats section-------
 
 .local-stats {
-<<<<<<< HEAD
+
   width: 80vw;
   height: 50vh;
   border: 3px solid black;
@@ -110,7 +110,7 @@ p.global-stats-label {
   opacity: 0.5;
   margin: 0 auto;
 
-=======
+
   @extend .global-stats;
 
 }
