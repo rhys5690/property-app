@@ -48,9 +48,15 @@
     </div>
 
     <div class="enter-square-meters form none">
-      <%= label_tag("Enter the number of square meters") %>
+      <%= label_tag("Enter how many square meters the property is") %>
       <%= text_field_tag(:square_meters) %>
       <%= button_tag("Next", :class => "seventh_phase") %>
+    </div>
+
+    <div class="enter-parking-spaces form none">
+      <%= label_tag("Enter the number of parking spaces the property contains") %>
+      <%= text_field_tag(:parking_spaces) %>
+      <%= button_tag("Next", :class => "eighth_phase") %>
     </div>
 
     <div class="enter-email form none">

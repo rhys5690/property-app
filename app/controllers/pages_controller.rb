@@ -102,8 +102,20 @@ class PagesController < ApplicationController
   end
 
   def search
+
+
+    # Apply modifiers prices
+
     @suburb = Suburb.where({:name => params[:suburb]}).first
+
     @bedrooms = params[:bedrooms]
+
+    @bth = params[:bathrooms]
+    @sqm = params[:square_meters]
+    @dist = params[:distance_from_transport]
+    @park = params[:parking_spaces]
+
+
     @prices = @suburb.prices[0].mean_b3
     User.create({:email => params[:email]})
     # Suburb.where({:name => params[:suburb]})
