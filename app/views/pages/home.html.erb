@@ -1,70 +1,89 @@
 
-<h1><img src="http://res.cloudinary.com/esthertan/image/upload/c_scale,h_50/v1482109339/Red_property_icon_k8lnbp.png"></h1>
-<p id="notice"><%= notice %></p></h1>
+<div class="logo-container">
+  <img src="http://res.cloudinary.com/esthertan/image/upload/c_scale,h_50/v1482109339/Red_property_icon_k8lnbp.png">
+  <h1>Property App</h1>
+</div>
 
-<h1>Property App</h1>
+<div class="evaluation-container">
+  <div class="form-wrapper">
+    <button class="Value-My-Property">Evaluate My Property</button>
 
-<p>Australian Valuation</p>
 
-<div class="row">
+    <div class="enter-suburb form none">
+
+    <%= form_tag("/search", method: "get") do %>
+      <%= label_tag("Enter your suburb") %>
+      <%= text_field_tag(:suburb) %>
+      <%= button_tag("Next", :class => "first_phase") %>
+    </div>
+
+    <div class="enter-bedrooms form none">
+      <%= label_tag("Enter your number of bedrooms") %>
+      <%= text_field_tag(:bedrooms) %>
+      <%= button_tag("Next", :class => "second_phase") %>
+    </div>
+
+    <div class="enter-distance form none">
+      <%= label_tag("Enter your distance from public transport") %>
+      <%= text_field_tag(:distance_from_transport) %>
+      <%= button_tag("Next", :class => "third_phase") %>
+    </div>
+
+    <div class="enter-email form none">
+      <%= label_tag("Enter your email") %>
+      <%= text_field_tag(:email) %>
+      <%= submit_tag("Next") %>
+    <% end %>
+    </div>
+  </div>
+</div>
+
+<br>
+
+<div class="global-stats">
+  <h3>Global Stats section</h3>
+
+</div>
+
+<br>
+
+<div class="local-stats">
+  <h3>Local Stats section</h3>
+
+</div>
+
+
+
+
+
+<!-- <div class="row">
   <div id="valuation-container" class="col s12 m6">
     <div class="card white valuation-card">
       <div class="card-content black-text">
         <span class="card-title">Valuation</span>
         <p>Click here for a valuation.</p>
       </div>
-      <!-- <div class="card-action">
-        <a href="#">Click on this link</a>
-        <a href="#">Click on this link</a>
-      </div> -->
+    </div> -->
+
+
+
+
+<!-- <div class="row">
+  <div id="australian-statistics-section" class="col s12 m6">
+    <div class="card white global-stats-card">
+      <div class="card-content black-text">
+        <span class="card-title property-app">Australian Statistics Section</span>
+        <div class="col s12">
+          This div is 12-columns wide
+        </div>
+        <div class="col s6">This div is 6-columns wide</div>
+          <p>Information<p>
+        <div class="col s6">This div is 6-columns wide</div>
+        <p>Information<p>
+      </div>
     </div>
-
-<div class="form-wrapper">
-<button class="Value-My-Property">Evaluate My Property</button>
-
-
-<div class="enter-suburb form none">
-
-<%= form_tag("/search", method: "get") do %>
-  <%= label_tag("Enter your suburb") %>
-  <%= text_field_tag(:suburb) %>
-  <%= button_tag("Next", :class => "first_phase") %>
-</div>
-
-<div class="enter-bedrooms form none">
-  <%= label_tag("Enter your number of bedrooms") %>
-  <%= text_field_tag(:bedrooms) %>
-  <%= button_tag("Next", :class => "second_phase") %>
-</div>
-
-<div class="enter-distance form none">
-  <%= label_tag("Enter your distance from public transport") %>
-  <%= text_field_tag(:distance_from_transport) %>
-  <%= button_tag("Next", :class => "third_phase") %>
-</div>
-
-<div class="enter-email form none">
-  <%= label_tag("Enter your email") %>
-  <%= text_field_tag(:email) %>
-  <%= submit_tag("Next") %>
-<% end %>
-</div>
-
-
-<div class="row">
-      <div id="australian-statistics-section" class="col s12 m6">
-        <div class="card white global-stats-card">
-          <div class="card-content black-text">
-            <span class="card-title property-app">Australian Statistics Section</span>
-      <div class="col s12">This div is 12-columns wide</div>
-      <div class="col s6">This div is 6-columns wide</div>
-      <p>Information<p>
-      <div class="col s6">This div is 6-columns wide</div>
-      <p>Information<p>
-    </div>
-    </div>
-    </div>
-    </div>
+  </div>
+</div> -->
 
 
 <div class="end-div">
