@@ -2,6 +2,7 @@ class PagesController < ApplicationController
 
   def home
 
+    # ------------------ Start of global stats section --------------------------
 
     # The following code trys to find the total price for all suburbs
 
@@ -52,7 +53,50 @@ class PagesController < ApplicationController
 
     @projected_growth_value = @current_month_average * (@projected_growth_percentage/100 +1)
 
-    
+
+
+    # ------------------ End of global stats section --------------------------
+    # ------------------ Start of Local stats section --------------------------
+
+    bed_base = 1
+    @b3_modi = bed_base * 1
+    @b1_modi = bed_base * 0.55
+    @b2_modi = bed_base * 0.77
+    @b4_modi = bed_base * 1.327
+    @b5_modi = bed_base * 1.6
+    @bmore_modi = bed_base * 1.8
+
+    bth_base = 1
+    @bth1_modi = bth_base * 0.96
+    @bth2_modi = bth_base * 1.05
+    @bth3_modi = bth_base *
+    @bth3_more_modi = bth_base * 1.06
+
+    sqm_base = 1
+    @sqm_200_250 = sqm_base * 1.0
+    @sqm_150_200 = sqm_base * 0.9
+    @sqm_100_150 = sqm_base * 0.8
+    @sqm_0_100 = sqm_base * 0.7
+    @sqm_250_300 = sqm_base * 1.1
+    @sqm_0_100 = sqm_base * 1.2
+    @sqm_300_350 = sqm_base * 1.3
+    @sqm_350_400 = sqm_base * 1.4
+    @sqm_400_more = sqm_base * 1.5
+
+    dist_base = 1
+    @dist_0_1 = dist_base * 1.05
+    @dist_1_2 = dist_base * 1
+    @dist_2_more = dist_base * 0.95
+
+    park_base = 1
+    @park_1 = park_base * 1
+    @park_2 = park_base * 1.03
+    @park_0 = park_base * 0.97
+    @park_3 = park_base * 1.06
+    @park_4_more = park_base * 1.08
+
+    # ------------------ End of Local stats section --------------------------
+
 
 
   end
