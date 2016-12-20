@@ -26,26 +26,36 @@
 
 //------- end logo section
 
-// ------- start evluation container
+// ------- start evaluation container
 
 .evaluation-container {
   width: 80vw;
   height: 30vh;
   background-color: white;
+  opacity: 0.5;
   margin: 0 auto;
-  border: 1px solid black;
+  border: 3px solid red;
+
   vertical-align: middle;
   padding-top: 2%;
 }
+
 
 // ----- end evaluation container
 
 // ------- start of global stats
 .global-stats {
   width: 80vw;
+<<<<<<< HEAD
+  height: 50vh;
+  border: 3px solid black;
+=======
   // height: 50vh;
   border: 1px solid black;
   background-color: white;
+  color: black;
+  opacity: 0.5;
+
   margin: 0 auto;
   text-align: center;
 
@@ -91,7 +101,18 @@ p.global-stats-label {
 // -------- start of local stats section-------
 
 .local-stats {
+<<<<<<< HEAD
+  width: 80vw;
+  height: 50vh;
+  border: 3px solid black;
+  background-color: white;
+  color: black;
+  opacity: 0.5;
+  margin: 0 auto;
+
+=======
   @extend .global-stats;
+
 }
 
 
@@ -154,9 +175,20 @@ margin-left: 10vw;
 text-align: center;
 border: solid 2px black;
 margin: 0 0;
-
 }
 
+button.Value-My-Property {
+    background-color: red;
+    color: white;
+  }
+
+label {
+  color: black;
+}
+
+button.first_phase {
+
+}
 
 
 
