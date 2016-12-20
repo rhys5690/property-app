@@ -4,8 +4,17 @@ var displayEnterEmail = function() {
     var $enterEmail = $(".enter-email");
     $enterEmail.removeClass("none");
 
+    var $submitForm = $(".submit-form");
+
+        $submitForm.on("submit", function(e) {
+
+            e.preventDefault();
+            $enterEmail.addClass("none");
+            var $displayResult = $(".display-result-property-value");
+            $displayResult.removeClass("none");
 
 
+        });
 };
 
 var displayEnterParking = function() {

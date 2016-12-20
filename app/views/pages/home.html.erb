@@ -11,7 +11,7 @@
 
     <div class="enter-suburb form none">
 
-    <%= form_tag("/search", method: "get") do %>
+    <%= form_tag("/", method: "get") do %>
       <%= label_tag("Enter the property's suburb name") %>
       <%= text_field_tag(:suburb) %>
       <%= button_tag("Next", :class => "first_phase") %>
@@ -62,8 +62,16 @@
     <div class="enter-email form none">
       <%= label_tag("Enter your email") %>
       <%= text_field_tag(:email) %>
-      <%= submit_tag("Next") %>
+      <%= submit_tag("Next", :class => "submit-form") %>
     <% end %>
+    </div>
+    <!-- Display result peoperty value inside homepage -->
+    <div class="display-result-property-value none">
+
+
+
+      <%= @prices %>
+
     </div>
   </div>
 </div>
