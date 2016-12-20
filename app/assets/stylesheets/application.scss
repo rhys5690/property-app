@@ -43,25 +43,45 @@
 // ------- start of global stats
 .global-stats {
   width: 80vw;
-  height: 50vh;
+  // height: 50vh;
   border: 1px solid black;
   background-color: white;
   margin: 0 auto;
+  text-align: center;
+
+}
+.global-stats h3 {
+  font-size: 32px;
 }
 
+.global-stats-box {
+  border: 1px solid gainsboro;
+  height: 28vh;
+}
+.global-stats-box p {
+  font-family: monospace;
+  font-size: 40px;
+}
+p.global-stats-label {
+  font-size: 16px;
+  color: black;
+}
+
+.global-suburb-list {
+  height: 50vh;
+}
+.global-suburb-list p {
+  font-size: 14px;
+}
 
 // ------ end of global stats ------------
 
 // -------- start of local stats section-------
 
 .local-stats {
-  width: 80vw;
-  height: 50vh;
-  border: 1px solid black;
-  background-color: white;
-  margin: 0 auto;
-
+  @extend .global-stats;
 }
+
 
 
 

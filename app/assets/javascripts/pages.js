@@ -67,4 +67,24 @@ $(document).ready(function() {
 
     });
 
+
+// ------- start of Steve section ---------------------
+
+
+  var globalCurrentPrice = setInterval( function(){
+      $("#global-current-price");
+      console.log("Hello Worl");
+
+  }, 1000);
+
+
+
+        // $<%= number_with_delimiter(@current_month_average*0.7, :precision => 0, :delimiter => ",") %>
+
+
+
+
+
+// ------- end of Steve section ------------------------
+
 });

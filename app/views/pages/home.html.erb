@@ -43,6 +43,48 @@
 <div class="global-stats">
   <h3>Global Stats section</h3>
 
+  <!-- ================== start of first row ================ -->
+
+  <div class="row">
+    <div class="col s4 global-stats-box">
+      <p class="global-stats-label">Current Average Price Sydney </p>
+      <p id="global-current-price">
+        $<%= number_with_delimiter(@current_month_average*0.7, :precision => 0, :delimiter => ",") %>
+      </p>
+    </div>
+    <div class="col s4 global-stats-box">
+      <p class="global-stats-label">Projected Growth Rate</p>
+      <p>
+        <%= number_with_precision(@projected_growth_percentage, :precision => 3, :delimiter => ",") %>%
+      </p>
+    </div>
+    <div class="col s4 global-stats-box">
+      <p class="global-stats-label"> Next Month Projected Value</p>
+      <p>
+        $<%= number_with_precision(@projected_growth_value*0.7, :precision => 0, :delimiter => ",") %>
+      </p>
+    </div>
+  </div>
+
+  <!-- ================== end of first row ================ -->
+  <!-- ================== start of second row ================ -->
+  <div class="row">
+    <div class="col s4 global-suburb-list">
+      <p class="global-stats-label">Price by Suburb</p>
+      <% @suburb_price_history_array.each do |suburb| %>
+        <p><%= "#{suburb[0][0]} - $#{suburb[0][1]}" %></p>
+      <% end %>
+    </div>
+
+  </div>
+
+  <!-- ================== end of second row ================ -->
+
+
+
+
+
+
 </div>
 
 <br>
