@@ -146,7 +146,20 @@ $(document).ready(function() {
         // $<%= number_with_delimiter(@current_month_average*0.7, :precision => 0, :delimiter => ",") %>
 
 
+// --------- Start of Global Emotion Section ---------------------
 
+function animateEmotion(){
+  // $("#happy-face").css("margin-top","0");
+  $(".home-owner-face").animate({marginTop:-10}, 1000, function(){
+      $(".home-owner-face").animate({marginTop:0},1000,animateEmotion);
+  });
+
+}
+animateEmotion();
+
+
+
+// --------- End of Global Emotion Section ------------------------
 
 
 // ------- end of Steve section ------------------------
