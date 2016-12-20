@@ -39,12 +39,12 @@ class PagesController < ApplicationController
 
     end
 
-    # Find the global current month average price
+    # Find the global previous month average price
 
     @previous_month_average_array = Price.where({:month => "Nov"}).pluck(:mean_b3)
     @previous_month_average = @previous_month_average_array.reduce(:+)/ (@previous_month_average_array.count)
 
-    # Find the global previous month average price
+    # Find the global current month average price
     @current_month_average_array = Price.where({:month => "Dec"}).pluck(:mean_b3)
     @current_month_average = @current_month_average_array.reduce(:+)/ (@current_month_average_array.count)
 

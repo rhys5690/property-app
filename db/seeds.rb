@@ -55,34 +55,34 @@ s2 = Suburb.create( {
   :longitude => 12.32123
 
 } )
-p1_1 = Price.create( {
+p2_1 = Price.create( {
   :month => "Dec",
   :year => "2016",
   :mean_b2 => 1375000,
   :mean_b3 => 1770000,
   :mean_b4 => 2350000,
-  :suburb_id => s1.id
+  :suburb_id => s2.id
 } )
 
-p1_2 = Price.create( {
+p2_2 = Price.create( {
   :month => "Nov",
   :year => "2016",
   :mean_b3 => 1764000,
-  :suburb_id => s1.id
+  :suburb_id => s2.id
 } )
 
-p1_3 = Price.create( {
+p2_3 = Price.create( {
   :month => "Oct",
   :year => "2016",
   :mean_b3 => 1760000,
-  :suburb_id => s1.id
+  :suburb_id => s2.id
 } )
 
-p1_4 = Price.create( {
+p2_4 = Price.create( {
   :month => "Sep",
   :year => "2016",
   :mean_b3 => 1755000,
-  :suburb_id => s1.id
+  :suburb_id => s2.id
 } )
 
 s3 = Suburb.create( {
@@ -91,33 +91,33 @@ s3 = Suburb.create( {
   :latitude => -21.232234,
   :longitude => 151.224321
 } )
-p1_1 = Price.create( {
+p3_1 = Price.create( {
   :month => "Dec",
   :year => "2016",
   :mean_b3 => 1280000,
   :mean_b4 => 1692000,
-  :suburb_id => s1.id
+  :suburb_id => s3.id
 } )
 
-p1_2 = Price.create( {
+p3_2 = Price.create( {
   :month => "Nov",
   :year => "2016",
   :mean_b3 => 1577500,
-  :suburb_id => s1.id
+  :suburb_id => s3.id
 } )
 
-p1_3 = Price.create( {
+p3_3 = Price.create( {
   :month => "Oct",
   :year => "2016",
   :mean_b3 => 1535000,
-  :suburb_id => s1.id
+  :suburb_id => s3.id
 } )
 
-p1_4 = Price.create( {
+p3_4 = Price.create( {
   :month => "Sep",
   :year => "2016",
   :mean_b3 => 1500000,
-  :suburb_id => s1.id
+  :suburb_id => s3.id
 } )
 
 
@@ -127,33 +127,33 @@ s4 = Suburb.create( {
   :latitude => -21.232234,
   :longitude => 151.224321
 } )
-p1_1 = Price.create( {
+p4_1 = Price.create( {
   :month => "Dec",
   :year => "2016",
   :mean_b3 => 1540000,
   :mean_b4 => 2000000,
-  :suburb_id => s1.id
+  :suburb_id => s4.id
 } )
 
-p1_2 = Price.create( {
+p4_2 = Price.create( {
   :month => "Nov",
   :year => "2016",
   :mean_b3 => 1925000,
-  :suburb_id => s1.id
+  :suburb_id => s4.id
 } )
 
-p1_3 = Price.create( {
+p4_3 = Price.create( {
   :month => "Oct",
   :year => "2016",
   :mean_b3 => 1950000,
   :suburb_id => s1.id
 } )
 
-p1_4 = Price.create( {
+p4_4 = Price.create( {
   :month => "Sep",
   :year => "2016",
   :mean_b3 => 1955000,
-  :suburb_id => s1.id
+  :suburb_id => s4.id
 } )
 
 
@@ -163,34 +163,34 @@ s5 = Suburb.create( {
   :latitude => -21.232234,
   :longitude => 151.224321
 } )
-p1_1 = Price.create( {
+p5_1 = Price.create( {
   :month => "Dec",
   :year => "2016",
   :mean_b2 => 1170000,
   :mean_b3 => 1500000,
   :mean_b4 => 2360000,
-  :suburb_id => s1.id
+  :suburb_id => s5.id
 } )
 
-p1_2 = Price.create( {
+p5_2 = Price.create( {
   :month => "Nov",
   :year => "2016",
   :mean_b3 => 1395000,
-  :suburb_id => s1.id
+  :suburb_id => s5.id
 } )
 
-p1_3 = Price.create( {
+p5_3 = Price.create( {
   :month => "Oct",
   :year => "2016",
   :mean_b3 => 1357500,
-  :suburb_id => s1.id
+  :suburb_id => s5.id
 } )
 
-p1_4 = Price.create( {
+p5_4 = Price.create( {
   :month => "Sep",
   :year => "2016",
   :mean_b3 => 1365000,
-  :suburb_id => s1.id
+  :suburb_id => s5.id
 } )
 
 
@@ -200,34 +200,34 @@ s6 = Suburb.create( {
   :latitude => -21.232234,
   :longitude => 151.224321
 } )
-p1_1 = Price.create( {
+p6_1 = Price.create( {
   :month => "Dec",
   :year => "2016",
   :mean_b2 => 1292500,
   :mean_b3 => 1650000,
   :mean_b4 => 2070000,
-  :suburb_id => s1.id
+  :suburb_id => s6.id
 } )
 
-p1_2 = Price.create( {
+p6_2 = Price.create( {
   :month => "Nov",
   :year => "2016",
   :mean_b3 => 1572500,
-  :suburb_id => s1.id
+  :suburb_id => s6.id
 } )
 
-p1_3 = Price.create( {
+p6_3 = Price.create( {
   :month => "Oct",
   :year => "2016",
   :mean_b3 => 1550000,
-  :suburb_id => s1.id
+  :suburb_id => s6.id
 } )
 
-p1_4 = Price.create( {
+p6_4 = Price.create( {
   :month => "Sep",
   :year => "2016",
   :mean_b3 => 1485000,
-  :suburb_id => s1.id
+  :suburb_id => s6.id
 } )
 
 
@@ -237,34 +237,34 @@ s7 = Suburb.create( {
   :latitude => -21.232234,
   :longitude => 151.224321
 } )
-p1_1 = Price.create( {
+p7_1 = Price.create( {
   :month => "Dec",
   :year => "2016",
   :mean_b2 => 815000,
   :mean_b3 => 8850000,
   :mean_b4 => 9925000,
-  :suburb_id => s1.id
+  :suburb_id => s7.id
 } )
 
-p1_2 = Price.create( {
+p7_2 = Price.create( {
   :month => "Nov",
   :year => "2016",
   :mean_b3 => 915000,
-  :suburb_id => s1.id
+  :suburb_id => s7.id
 } )
 
-p1_3 = Price.create( {
+p7_3 = Price.create( {
   :month => "Oct",
   :year => "2016",
   :mean_b3 => 900000,
-  :suburb_id => s1.id
+  :suburb_id => s7.id
 } )
 
-p1_4 = Price.create( {
+p7_4 = Price.create( {
   :month => "Sep",
   :year => "2016",
   :mean_b3 => 900000,
-  :suburb_id => s1.id
+  :suburb_id => s7.id
 } )
 
 
@@ -274,104 +274,105 @@ s8 = Suburb.create( {
   :latitude => -21.232234,
   :longitude => 151.224321
 } )
-p1_1 = Price.create( {
+p8_1 = Price.create( {
   :month => "Dec",
   :year => "2016",
   :mean_b3 => 1151000,
   :mean_b4 => 1365000,
-  :suburb_id => s1.id
+  :suburb_id => s8.id
 } )
 
-p1_2 = Price.create( {
+p8_2 = Price.create( {
   :month => "Nov",
   :year => "2016",
   :mean_b3 => 1387000,
-  :suburb_id => s1.id
+  :suburb_id => s8.id
 } )
 
-p1_3 = Price.create( {
+p8_3 = Price.create( {
   :month => "Oct",
   :year => "2016",
   :mean_b3 => 1372500,
-  :suburb_id => s1.id
+  :suburb_id => s8.id
 } )
 
-p1_4 = Price.create( {
+p8_4 = Price.create( {
   :month => "Sep",
   :year => "2016",
   :mean_b3 => 1360000,
-  :suburb_id => s1.id
+  :suburb_id => s8.id
 } )
 
 
-s3 = Suburb.create( {
+s9 = Suburb.create( {
   :name => "Chatswood",
   :postcode => "2067",
   :latitude => -21.232234,
   :longitude => 151.224321
+
 } )
-p1_1 = Price.create( {
+p9_1 = Price.create( {
   :month => "Dec",
   :year => "2016",
-  :mean_b3 => 1900000,
+  :mean_b3 => 2225220,
   :mean_b4 => 2315000,
-  :suburb_id => s1.id
+  :suburb_id => s9.id
 } )
 
-p1_2 = Price.create( {
+p9_2 = Price.create( {
   :month => "Nov",
   :year => "2016",
-  :mean_b3 => 225203000,
-  :suburb_id => s1.id
+  :mean_b3 => 2225230,
+  :suburb_id => s9.id
 } )
 
-p1_3 = Price.create( {
+p9_3 = Price.create( {
   :month => "Oct",
   :year => "2016",
   :mean_b3 => 2150000,
-  :suburb_id => s1.id
+  :suburb_id => s9.id
 } )
 
-p1_4 = Price.create( {
+p9_4 = Price.create( {
   :month => "Sep",
   :year => "2016",
-  :mean_b3 => 21625000,
-  :suburb_id => s1.id
+  :mean_b3 => 2162500,
+  :suburb_id => s9.id
 } )
 
 
-s3 = Suburb.create( {
+s10 = Suburb.create( {
   :name => "Liverpool",
   :postcode => "2170",
   :latitude => -21.232234,
   :longitude => 151.224321
 } )
-p1_1 = Price.create( {
+p10_1 = Price.create( {
   :month => "Dec",
   :year => "2016",
   :mean_b2 => 1350000,
   :mean_b3 => 680000,
   :mean_b4 => 755000,
-  :suburb_id => s1.id
+  :suburb_id => s10.id
 } )
 
-p1_2 = Price.create( {
+p10_2 = Price.create( {
   :month => "Nov",
   :year => "2016",
   :mean_b3 => 738000,
-  :suburb_id => s1.id
+  :suburb_id => s10.id
 } )
 
-p1_3 = Price.create( {
+p10_3 = Price.create( {
   :month => "Oct",
   :year => "2016",
   :mean_b3 => 730000,
-  :suburb_id => s1.id
+  :suburb_id => s10.id
 } )
 
-p1_4 = Price.create( {
+p10_4 = Price.create( {
   :month => "Sep",
   :year => "2016",
   :mean_b3 => 724750,
-  :suburb_id => s1.id
+  :suburb_id => s10.id
 } )
