@@ -182,6 +182,35 @@ $(document).ready(function() {
 
 
         //  =========================== Start of Steve's Area ================================
+        var demographicsData = {
+            labels: [
+                "Elderly",
+                "Others",
+                "Independent Youth"
+            ],
+            datasets: [
+                {
+                    data: [26.2, 58.4, 15.4],
+                    backgroundColor: [
+                        "#FF6384",
+                        "#36A2EB",
+                        "#FFCE56"
+                    ],
+                    hoverBackgroundColor: [
+                        "#FF6384",
+                        "#36A2EB",
+                        "#FFCE56"
+                    ]
+                }]
+        };
+
+        var ctx = document.getElementById("demographics");
+        var myDoughnutChart = new Chart(ctx, {
+          type: 'doughnut',
+          data: demographicsData,
+          options: {}
+        });
+
 
 
 
@@ -229,25 +258,113 @@ $(document).ready(function() {
     // ------- start of Steve section ---------------------
 
 
-    var globalCurrentPrice = setInterval(function() {
-        $("#global-current-price");
-
-    }, 1000);
 
 
+// --------------------------- start of global section ------------------------
 
+
+
+
+// ------------------start of charts in global section -----------------------------
+
+// Using the core $.ajax() method
+$.ajax({
+    // The URL for the request
+    url: "/",
+    // The type of request
+    type: "GET",
+    // The type of data we expect back
+    dataType : "json",
+    // The data to send (will be converted to a query string and added to the URL)
+
+    // Code to run if the request succeeds.
+    // The responseText is passed to the 'success' function as the 'data' argument
+}).done( function (data) {
+  // ------------ start of chart js stuff -------------------------------------
+
+
+
+      //  for loop to find array of suburb names and array of prices (Dec)
+      var suburbNameArray = [];
+      var suburbPriceArray = [];
+      for (i=0; i<data.suburb_price_hash.length; i++){
+
+        suburbNameArray.push(data.suburb_price_hash[i][0][0]);
+        suburbPriceArray.push(data.suburb_price_hash[i][0][1]);
+      }
+
+
+
+      var ctx = document.getElementById("myChart");
+      var myChart = new Chart(ctx, {
+          type: 'bar',
+          data: {
+
+              labels: [suburbNameArray[0], suburbNameArray[1], suburbNameArray[2], suburbNameArray[3], suburbNameArray[4], suburbNameArray[5],suburbNameArray[6],suburbNameArray[7],suburbNameArray[8],suburbNameArray[9]],
+              datasets: [{
+                  label: 'Average Price',
+                  data: [suburbPriceArray[0], suburbPriceArray[1], suburbPriceArray[2], suburbPriceArray[3], suburbPriceArray[4], suburbPriceArray[5],suburbPriceArray[6],suburbPriceArray[7],suburbPriceArray[8],suburbPriceArray[9]],
+                  backgroundColor: [
+                      'rgba(255, 99, 132, 0.2)',
+                      'rgba(54, 162, 235, 0.2)',
+                      'rgba(255, 206, 86, 0.2)',
+                      'rgba(75, 192, 192, 0.2)',
+                      'rgba(153, 102, 255, 0.2)',
+                      'rgba(255, 159, 64, 0.2)',
+                      'rgba(255, 99, 132, 0.2)',
+                      'rgba(54, 162, 235, 0.2)',
+                      'rgba(255, 206, 86, 0.2)',
+                      'rgba(153, 102, 255, 0.2)'
+                  ],
+                  borderColor: [
+                      'rgba(255,99,132,1)',
+                      'rgba(54, 162, 235, 1)',
+                      'rgba(255, 206, 86, 1)',
+                      'rgba(75, 192, 192, 1)',
+                      'rgba(153, 102, 255, 1)',
+                      'rgba(44, 159, 64, 1)',
+                      'rgba(255, 159, 64, 1)',
+                      'rgba(10, 40, 64, 1)',
+                      'rgba(75, 192, 192, 1)',
+                      'rgba(255,59,212,1)'
+                  ],
+                  borderWidth: 1
+              }]
+          },
+          options: {
+              scales: {
+                  yAxes: [{
+                      ticks: {
+                          beginAtZero:true
+                      }
+                  }]
+              }
+          }
+      });
+
+});
+// ------------ end of chart js stuff on global section-------------------------------------
+
+
+
+
+
+
+
+
+// ------------------------- end of bar chart --------------------------------
     // $<%= number_with_delimiter(@current_month_average*0.7, :precision => 0, :delimiter => ",") %>
 
 
-    // --------- Start of Global Emotion Section ---------------------
+// ---------------------- Start of Global Emotion Section ---------------------
 
     function animateEmotion() {
         // $("#happy-face").css("margin-top","0");
-        $(".home-owner-face").animate({
-            marginTop: -10
+        $(".animate-face").animate({
+            marginTop: 20
         }, 1000, function() {
-            $(".home-owner-face").animate({
-                marginTop: 0
+            $(".animate-face").animate({
+                marginTop: 10
             }, 1000, animateEmotion);
         });
 
@@ -265,9 +382,9 @@ $(document).ready(function() {
 
 
 
-    // --------- End of Global Emotion Section ------------------------
+// ------------------ End of Global Emotion Section ------------------------
 
 
-    // ------- end of Steve section ------------------------
+// ----------------------------- end of Steve section ------------------------
 
 });

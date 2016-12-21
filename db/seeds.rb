@@ -94,29 +94,29 @@ s3 = Suburb.create( {
 p3_1 = Price.create( {
   :month => "Dec",
   :year => "2016",
-  :mean_b3 => 1280000,
-  :mean_b4 => 1692000,
+  :mean_b3 => 854750,
+  :mean_b4 => 0,
   :suburb_id => s3.id
 } )
 
 p3_2 = Price.create( {
   :month => "Nov",
   :year => "2016",
-  :mean_b3 => 1577500,
+  :mean_b3 => 853750,
   :suburb_id => s3.id
 } )
 
 p3_3 = Price.create( {
   :month => "Oct",
   :year => "2016",
-  :mean_b3 => 1535000,
+  :mean_b3 => 851750,
   :suburb_id => s3.id
 } )
 
 p3_4 = Price.create( {
   :month => "Sep",
   :year => "2016",
-  :mean_b3 => 1500000,
+  :mean_b3 => 841250,
   :suburb_id => s3.id
 } )
 
@@ -130,7 +130,7 @@ s4 = Suburb.create( {
 p4_1 = Price.create( {
   :month => "Dec",
   :year => "2016",
-  :mean_b3 => 1540000,
+  :mean_b3 => 1288000,
   :mean_b4 => 2000000,
   :suburb_id => s4.id
 } )
@@ -138,21 +138,21 @@ p4_1 = Price.create( {
 p4_2 = Price.create( {
   :month => "Nov",
   :year => "2016",
-  :mean_b3 => 1925000,
+  :mean_b3 => 1289023,
   :suburb_id => s4.id
 } )
 
 p4_3 = Price.create( {
   :month => "Oct",
   :year => "2016",
-  :mean_b3 => 1950000,
+  :mean_b3 => 1278000,
   :suburb_id => s1.id
 } )
 
 p4_4 = Price.create( {
   :month => "Sep",
   :year => "2016",
-  :mean_b3 => 1955000,
+  :mean_b3 => 1279000,
   :suburb_id => s4.id
 } )
 
@@ -175,21 +175,21 @@ p5_1 = Price.create( {
 p5_2 = Price.create( {
   :month => "Nov",
   :year => "2016",
-  :mean_b3 => 1395000,
+  :mean_b3 => 1495000,
   :suburb_id => s5.id
 } )
 
 p5_3 = Price.create( {
   :month => "Oct",
   :year => "2016",
-  :mean_b3 => 1357500,
+  :mean_b3 => 1457500,
   :suburb_id => s5.id
 } )
 
 p5_4 = Price.create( {
   :month => "Sep",
   :year => "2016",
-  :mean_b3 => 1365000,
+  :mean_b3 => 1395000,
   :suburb_id => s5.id
 } )
 
@@ -212,21 +212,21 @@ p6_1 = Price.create( {
 p6_2 = Price.create( {
   :month => "Nov",
   :year => "2016",
-  :mean_b3 => 1572500,
+  :mean_b3 => 1582500,
   :suburb_id => s6.id
 } )
 
 p6_3 = Price.create( {
   :month => "Oct",
   :year => "2016",
-  :mean_b3 => 1550000,
+  :mean_b3 => 1560000,
   :suburb_id => s6.id
 } )
 
 p6_4 = Price.create( {
   :month => "Sep",
   :year => "2016",
-  :mean_b3 => 1485000,
+  :mean_b3 => 1495000,
   :suburb_id => s6.id
 } )
 
@@ -241,8 +241,8 @@ p7_1 = Price.create( {
   :month => "Dec",
   :year => "2016",
   :mean_b2 => 815000,
-  :mean_b3 => 8850000,
-  :mean_b4 => 9925000,
+  :mean_b3 => 885000,
+  :mean_b4 => 992500,
   :suburb_id => s7.id
 } )
 
@@ -285,21 +285,21 @@ p8_1 = Price.create( {
 p8_2 = Price.create( {
   :month => "Nov",
   :year => "2016",
-  :mean_b3 => 1387000,
+  :mean_b3 => 1187000,
   :suburb_id => s8.id
 } )
 
 p8_3 = Price.create( {
   :month => "Oct",
   :year => "2016",
-  :mean_b3 => 1372500,
+  :mean_b3 => 1172500,
   :suburb_id => s8.id
 } )
 
 p8_4 = Price.create( {
   :month => "Sep",
   :year => "2016",
-  :mean_b3 => 1360000,
+  :mean_b3 => 1160000,
   :suburb_id => s8.id
 } )
 
@@ -322,21 +322,21 @@ p9_1 = Price.create( {
 p9_2 = Price.create( {
   :month => "Nov",
   :year => "2016",
-  :mean_b3 => 225203000,
+  :mean_b3 => 1901600,
   :suburb_id => s9.id
 } )
 
 p9_3 = Price.create( {
   :month => "Oct",
   :year => "2016",
-  :mean_b3 => 2150000,
+  :mean_b3 => 1902000,
   :suburb_id => s9.id
 } )
 
 p9_4 = Price.create( {
   :month => "Sep",
   :year => "2016",
-  :mean_b3 => 2162500,
+  :mean_b3 => 1902040,
   :suburb_id => s9.id
 } )
 
@@ -359,14 +359,14 @@ p10_1 = Price.create( {
 p10_2 = Price.create( {
   :month => "Nov",
   :year => "2016",
-  :mean_b3 => 738000,
+  :mean_b3 => 708000,
   :suburb_id => s10.id
 } )
 
 p10_3 = Price.create( {
   :month => "Oct",
   :year => "2016",
-  :mean_b3 => 730000,
+  :mean_b3 => 710000,
   :suburb_id => s10.id
 } )
 

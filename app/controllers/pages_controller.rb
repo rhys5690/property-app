@@ -54,8 +54,18 @@ class PagesController < ApplicationController
 
     @projected_growth_value = @current_month_average * (@projected_growth_percentage/100 +1)
 
+    # Render as JSON
+    @response = {
+      :suburb_price_hash => @suburb_price_history_array,
+      :projected_growth_value => @projected_growth_value,
+      :previous_month_average => @previous_month_average,
+      :current_month_average => @current_month_average
+    }
 
-
+    respond_to do |format|
+      format.html # This will render generator.html.erb in response to requests for HTML
+      format.json { render json: @response } # This will render JSON in response to AJAX requests
+    end
     # ------------------ End of global stats section --------------------------
     # ------------------ Start of Local stats section --------------------------
 
