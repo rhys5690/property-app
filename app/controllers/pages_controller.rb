@@ -59,6 +59,15 @@ class PagesController < ApplicationController
     # ------------------ End of global stats section --------------------------
     # ------------------ Start of Local stats section --------------------------
 
+
+
+
+    # ------------------ End of Local stats section --------------------------
+
+  end
+
+  def search
+
     bed_base = 1
     @b3_modi = bed_base * 1
     @b1_modi = bed_base * 0.55
@@ -96,11 +105,7 @@ class PagesController < ApplicationController
     @park_3 = park_base * 1.06
     @park_4_more = park_base * 1.08
 
-    # ------------------ End of Local stats section --------------------------
 
-  end
-
-  def search
 
     # UserMailer.results(params[:email]).deliver_now
     # Apply modifiers prices
@@ -187,10 +192,10 @@ class PagesController < ApplicationController
 
     @my_property_price = @suburb_hash.prices[0].mean_b3 * (@bathrooms_modi.to_f) * (@bedrooms_modi.to_f) * (@parking_spaces_modi.to_f) * (@sqm_modi.to_f) * (@distance_from_transport_modi.to_f)
 
+    
 
-
-    @my_suburb_current_price = @suburb.price[0].mean_b3
-    puts "The price of my property is: #{@my_suburb_current_price}"
+    # @my_suburb_current_price = @suburb.price[0].mean_b3
+    # puts "The price of my property is: #{@my_suburb_current_price}"
 
 
     @response = {
