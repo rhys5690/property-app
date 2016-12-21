@@ -110,19 +110,24 @@ p.global-stats-label {
 .local-stats {
 
   width: 80vw;
-  height: 50vh;
+  // height: 50vh;
   border: 3px solid black;
   background-color: white;
   color: black;
   font-weight: bold;
-  opacity: 0.5;
+  opacity: 1;
   margin: 0 auto;
-
 
   @extend .global-stats;
 
 }
+.local-stats h5 {
+  color: black;
+}
 
+.demographics {
+  border: 1px black solid;
+}
 
 
 

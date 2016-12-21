@@ -182,6 +182,35 @@ $(document).ready(function() {
 
 
         //  =========================== Start of Steve's Area ================================
+        var demographicsData = {
+            labels: [
+                "Elderly",
+                "Others",
+                "Independent Youth"
+            ],
+            datasets: [
+                {
+                    data: [26.2, 58.4, 15.4],
+                    backgroundColor: [
+                        "#FF6384",
+                        "#36A2EB",
+                        "#FFCE56"
+                    ],
+                    hoverBackgroundColor: [
+                        "#FF6384",
+                        "#36A2EB",
+                        "#FFCE56"
+                    ]
+                }]
+        };
+
+        var ctx = document.getElementById("demographics");
+        var myDoughnutChart = new Chart(ctx, {
+          type: 'doughnut',
+          data: demographicsData,
+          options: {}
+        });
+
 
 
 
@@ -204,10 +233,7 @@ $(document).ready(function() {
     // ------- start of Steve section ---------------------
 
 
-    var globalCurrentPrice = setInterval(function() {
-        $("#global-current-price");
 
-    }, 1000);
 
 // --------------------------- start of global section ------------------------
 
