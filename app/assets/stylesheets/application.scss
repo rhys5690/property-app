@@ -110,7 +110,7 @@ p.global-stats-label {
 .local-stats {
 
   width: 80vw;
-  height: 50vh;
+  height: 100vh;
   border: 3px solid black;
   background-color: white;
   color: black;
@@ -129,15 +129,15 @@ p.global-stats-label {
 
 // -------- end of local stats section ---------
 
-// video.halfscreen {
-// position: fixed;
-// top: 50%;
-// min-width: 100%;
-// min-height: 50%;
-// width: auto;
-// background: url ("http://res.cloudinary.com/esthertan/video/upload/c_fill,h_500,w_1200/v1482276668/residential-neighborhood_h9wsw8ogg_WL_online-video-cutter.com_pct9bu.mp4");
-// z-index: -10;
-// }
+video.halfscreen {
+position: fixed;
+top: 50%;
+min-width: 100%;
+min-height: 50%;
+width: auto;
+background: url ("http://res.cloudinary.com/esthertan/video/upload/c_fill,h_500,w_1200/v1482276668/residential-neighborhood_h9wsw8ogg_WL_online-video-cutter.com_pct9bu.mp4");
+z-index: -10;
+}
 
 
 body {
@@ -212,6 +212,7 @@ button.Value-My-Property {
     font-style: solid;
     color: white;
     opacity: 1;
+    text-align: center;
 
   }
 

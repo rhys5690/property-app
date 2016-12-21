@@ -190,10 +190,35 @@ $(document).ready(function() {
 
 
         //  =========================== Start of Esther's Area ================================
-
-
-
-
+        Var ctx = document.getElementById("myBubbleChart");
+        var myBubbleChart = new Chart(ctx,{
+            data = {
+            datasets: [
+        {
+            label: '3 bedroom & 4 bedroom homes V 2 & 3 bedroom units',
+            data: [
+                {
+                    x: 1770000, 1770000, 1280000, 1540000, 1500000, 1650000, 8850000, 1151000, 1900000, 680000
+                    y: 2350000, 2350000, 1692000, 2000000, 2360000, 2070000, 9925000, 1365000, 2315000, 755000
+                    r: 10
+                },
+                {
+                    x: 1050555, 820000, 705000, 755750, 930000, 1150000, 790000, 950000, 412000
+                    y: 1630000, 1027500, 854750, 1288000, 1200000, 1822500, 900000, 1628000, 542000
+                    r: 10
+                }
+            ],
+            backgroundColor:"#FF6384",
+            hoverBackgroundColor: "#FF6384",
+        }]
+    };
+                points: {
+            borderWidth: 1,
+            borderColor: 'rgb(0,0,0)'
+        }
+    }
+}
+});
         //  =========================== End of Esther's Area ================================
 
 
