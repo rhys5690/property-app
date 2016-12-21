@@ -189,8 +189,8 @@ class PagesController < ApplicationController
 
 
 
-    @my_suburb_current_price = @suburb.price[0].mean_b3
-    puts "The price of my property is: #{@my_suburb_current_price}"
+    # @my_suburb_current_price = @suburb.price[0].mean_b3
+    # puts "The price of my property is: #{@my_suburb_current_price}"
 
 
     @response = {
@@ -222,7 +222,7 @@ class PagesController < ApplicationController
     # @park = params[:parking_spaces]
     #
     # # Determine total price
-    @prices = @suburb_hash.prices[0].mean_b3 * @bedrooms.to_i * @bth.to_i * @sqm.to_i * @dist.to_i * @park.to_i
+    # @prices = @suburb_hash.prices[0].mean_b3 * @bedrooms.to_i * @bth.to_i * @sqm.to_i * @dist.to_i * @park.to_i
     # User.create({:email => params[:email]})
     # # Suburb.where({:name => params[:suburb]})
     # # @prices = @suburb.prices

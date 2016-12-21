@@ -171,6 +171,10 @@ $(document).ready(function() {
         var $displayPropertyValue = $(".local-stats");
         $displayPropertyValue.removeClass("none");
 
+        // Display result value
+
+        console.log(data.my_property_price);
+
 
 
 
