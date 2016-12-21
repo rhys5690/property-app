@@ -162,6 +162,7 @@ $(document).ready(function() {
         $enterEmail.addClass("none");
 
         $(".global-stats").addClass("none");
+        $(".local-stats").removeClass("nonte");
 
         // var $displayResult = $(".display-result-property-value");
         // $displayResult.removeClass("none");
@@ -171,10 +172,85 @@ $(document).ready(function() {
 
         // Display result value
 
-        $(".evaluation-container").append("<p> Your " + data.bedrooms + " bedroom property is worth $" + data.my_property_price);
+        $(".evaluation-container").append("<p> Your " + data.bedrooms + " bedroom property is worth $" + data.my_property_price + "</p>");
 
 
         //  ===========================  Start of Rhy's Area ================================
+
+
+        //Your property stats
+        $(".your-property-stats").append("<p> Address: " + data.house_number + " " + data.street_name + " " + data.suburb + "</p>" );
+        $(".your-property-stats").append("<p> Bedrooms: " + data.bedrooms + "</p>" );
+        $(".your-property-stats").append("<p> Bathrooms: " + data.bathrooms + "</p>" );
+        $(".your-property-stats").append("<p> Square Meters: " + data.sqm + "</p>" );
+        $(".your-property-stats").append("<p> Parking Spaces: " + data.parking_spaces + "</p>" );
+        $(".your-property-stats").append("<p> Distance from tansport: " + data.distance_from_transport + "km</p>" );
+        $(".your-property-stats").append("<p> Value: $" + data.my_property_price + "</p>" );
+
+        //Your property value Bar Chart
+
+        var ctx = document.getElementById("rhysChart");
+        var rhysChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+
+                labels: ["Your Property is worth $" + data.my_property_price],
+                datasets: [{
+                    label: 'Your Property Value',
+                    data: [data.my_property_price],
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                    ],
+                    borderColor: [
+                        'rgba(255,99,132,1)',
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero:true
+                        }
+                    }]
+                }
+            }
+        });
+
+        });
+
+        //Suburb prices chart
+
+        var ctx = document.getElementById("rhysChart2");
+
+        var suburbRadarChart = new Chart(ctx, {
+            type: 'radar',
+            data: {
+                labels: ["Oatley", "Cronulla", "Balmain", "Mossman", "Redfern", "Rozelle", "Bankstown"],
+                datasets: [{
+                    label: "Suburb Averages",
+                    backgroundColor: "rgba(180, 99, 132, 0.2)",
+                    borderColor: "rgba(180, 45, 150, 1)",
+                    pointBackgroundColor: "rgba(179,181,198,1)",
+                    pointBorderColor: "#fff",
+                    pointHoverBackgroundColor: "#fff",
+                    pointHoverBorderColor: "rgba(179,181,198,1)",
+                    data: [20000000, 23000000, 2100000, 3200000, 2800000, 2300000, 1800000]
+                }, {
+                    label: "Suburb Projected Average",
+                    backgroundColor: "rgba(255,99,132,0.2)",
+                    borderColor: "rgba(255,99,132,1)",
+                    pointBackgroundColor: "rgba(255,99,132,1)",
+                    pointBorderColor: "#fff",
+                    pointHoverBackgroundColor: "#fff",
+                    pointHoverBorderColor: "rgba(255,99,132,1)",
+                    data: [28, 48, 40, 19, 96, 27, 100]
+                },
+            ]
+
+            }
+        });
 
 
 
@@ -219,6 +295,7 @@ $(document).ready(function() {
 
 
         //  =========================== Start of Esther's Area ================================
+<<<<<<< HEAD
         Var ctx = document.getElementById("myBubbleChart");
         var myBubbleChart = new Chart(ctx, {
             data = {
@@ -244,6 +321,37 @@ $(document).ready(function() {
         }
 
         });
+=======
+//         Var ctx = document.getElementById("myBubbleChart");
+//         var myBubbleChart = new Chart(ctx,{
+//             data = {
+//             datasets: [
+//         {
+//             label: '3 bedroom & 4 bedroom homes V 2 & 3 bedroom units',
+//             data: [
+//                 {
+//                     x: 1770000, 1770000, 1280000, 1540000, 1500000, 1650000, 8850000, 1151000, 1900000, 680000
+//                     y: 2350000, 2350000, 1692000, 2000000, 2360000, 2070000, 9925000, 1365000, 2315000, 755000
+//                     r: 10
+//                 },
+//                 {
+//                     x: 1050555, 820000, 705000, 755750, 930000, 1150000, 790000, 950000, 412000
+//                     y: 1630000, 1027500, 854750, 1288000, 1200000, 1822500, 900000, 1628000, 542000
+//                     r: 10
+//                 }
+//             ],
+//             backgroundColor:"#FF6384",
+//             hoverBackgroundColor: "#FF6384",
+//         }]
+//     };
+//                 points: {
+//             borderWidth: 1,
+//             borderColor: 'rgb(0,0,0)'
+//         }
+//     }
+// }
+// });
+
         //  =========================== End of Esther's Area ================================
 
 
@@ -383,4 +491,4 @@ $.ajax({
 
 // ----------------------------- end of Steve section ------------------------
 
-});
+// });
