@@ -71,7 +71,7 @@ class PagesController < ApplicationController
     @bth1_modi = bth_base * 0.96
     @bth2_modi = bth_base * 1.05
     @bth3_modi = bth_base *
-    @bth3_more_modi = bth_base * 1.06
+    @bth4_more_modi = bth_base * 1.06
 
     sqm_base = 1
     @sqm_200_250 = sqm_base * 1.0
@@ -132,6 +132,7 @@ class PagesController < ApplicationController
       @bedrooms_modi = @bmore_modi
     end
 
+
     @sqm_int = @sqm.to_i
     if @sqm_int < 100
       @sqm_modi = @sqm_0_100
@@ -144,13 +145,48 @@ class PagesController < ApplicationController
     elsif @sqm_int >= 250 && @sqm_int <300
       @sqm_modi = @sqm_250_300
     elsif @sqm_int >= 300 && @sqm_int <350
-      @sqm_modi = @sqm_250_300
-    elsif @sqm_int >= 200 && @sqm_int <250
-      @sqm_modi = @sqm_250_300
+      @sqm_modi = @sqm_300_350
+    elsif @sqm_int >= 350 && @sqm_int <400
+      @sqm_modi = @sqm_350_400
     else
-      @sqm_modi = "sqm more than 150"
+      @sqm_modi = @sqm_400_more
     end
 
+    case @bathrooms
+    when "1"
+      @bathrooms_modi = @bth1_modi
+    when "2"
+      @bathrooms_modi = @bth1_modi
+    when "3"
+      @bathrooms_modi = @bth1_modi
+    else
+      @bathrooms_modi = @bth4_more_modi
+    end
+
+    @distance_from_transport_int = @distance_from_transport.to_i
+    if @distance_from_transport_int <= 1
+      @distance_from_transport_modi = @dist_0_1
+    elsif @distance_from_transport >1 && @distance_from_transport <= 2
+      @distance_from_transport_modi = @dist_1_2
+    else
+      @distance_from_transport_modi = @dist_2_more
+    end
+
+    case @parking_spaces_modi
+    when "0"
+      @parking_spaces_modi = @park_0
+    when "1"
+      @parking_spaces_modi = @park_1
+    when "2"
+      @parking_spaces_modi = @park_2
+    when "3"
+      @parking_spaces_modi = @park_3
+    else
+      @parking_spaces_modi = @park_4_more
+    end
+
+    @my_property_price = @suburb_hash.prices[0].mean_b3 * (@bathrooms_modi.to_f) * (@bedrooms_modi.to_f) * (@parking_spaces_modi.to_f) * (@sqm_modi.to_f) * (@distance_from_transport_modi.to_f)
+    
     @response = {
       :suburb_hash => @suburb_hash,
       :suburb => @suburb,
@@ -160,7 +196,9 @@ class PagesController < ApplicationController
       :bathrooms => @bathrooms,
       :street_name => @street_name,
       :house_number => @house_number,
-      :distance_from_transport => @distance_from_transport
+      :distance_from_transport => @distance_from_transport,
+      :my_property_price => @my_property_price
+
 
     }
     # binding.pry
