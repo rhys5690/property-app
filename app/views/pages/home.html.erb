@@ -11,7 +11,7 @@
 
     <div class="enter-suburb form none">
 
-    <%= form_tag("/", method: "get") do %>
+    <%= form_tag("/search", method: "get", :remote => true, :id => "suburb-form") do %>
       <%= label_tag("Enter the property's suburb name") %>
       <%= text_field_tag(:suburb) %>
       <%= button_tag("Next", :class => "first_phase") %>
@@ -67,10 +67,10 @@
     </div>
     <!-- Display result peoperty value inside homepage -->
     <div class="display-result-property-value none">
+      
 
 
-
-      <%= @prices %>
+      <%#= @prices %>
 
     </div>
   </div>
