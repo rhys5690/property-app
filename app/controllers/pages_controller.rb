@@ -106,6 +106,8 @@ class PagesController < ApplicationController
     # look up postgres ILIKE (case insesnsitive database queries)
     @suburb = Suburb.where({:name => params[:suburb]}).first
     @bedrooms = params[:bedrooms]
+    
+
     @sqm = params[:square_meters]
     @park = params[:parking_spaces]
 
@@ -131,7 +133,7 @@ class PagesController < ApplicationController
     #
     # # Determine total price
     #
-    # @prices = @suburb.prices[0].mean_b3 * @bedrooms * @bth * @sqm * @dist * @park
+    @prices = @suburb.prices[0].mean_b3 * @bedrooms * @bth * @sqm * @dist * @park
     # User.create({:email => params[:email]})
     # # Suburb.where({:name => params[:suburb]})
     # # @prices = @suburb.prices
