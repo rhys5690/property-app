@@ -1,20 +1,20 @@
 
+
+
 var displayEnterEmail = function() {
 
     var $enterEmail = $(".enter-email");
     $enterEmail.removeClass("none");
 
-    var $submitForm = $(".submit-form");
+    // var $submitForm = $(".submit-form");
+    // $submitForm.on("submit", function(e) {
+    //     e.preventDefault();
+    //     $enterEmail.addClass("none");
+    //     var $displayResult = $(".display-result-property-value");
+    //     $displayResult.removeClass("none");
+    // });
 
-        $submitForm.on("submit", function(e) {
 
-            e.preventDefault();
-            $enterEmail.addClass("none");
-            var $displayResult = $(".display-result-property-value");
-            $displayResult.removeClass("none");
-
-
-        });
 };
 
 var displayEnterParking = function() {
@@ -152,6 +152,18 @@ $(document).ready(function() {
     $valueMyProperty.on("click", function() {
         $valueMyProperty.addClass("none");
         displayEnterSuburb();
+
+    });
+
+    $("#suburb-form").on("ajax:success", function(e, data, status, xhr) {
+        console.log(data);
+        // there's a variable in this function called data that we can access.
+        var suburb = data.suburb.name;
+        var postcode = data.suburb.postcode;
+        $enterEmail.addClass("none");
+        var $displayResult = $(".display-result-property-value");
+        $displayResult.removeClass("none");
+        $displayResult.append("<p>" + postcode + "</p>");
 
     });
 

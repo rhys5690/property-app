@@ -102,28 +102,40 @@ class PagesController < ApplicationController
   end
 
   def search
-
-
     # Apply modifiers prices
-
+    # look up postgres ILIKE (case insesnsitive database queries)
     @suburb = Suburb.where({:name => params[:suburb]}).first
-
     @bedrooms = params[:bedrooms]
-
-    @bth = params[:bathrooms]
-
     @sqm = params[:square_meters]
-
-    @dist = params[:distance_from_transport]
-
     @park = params[:parking_spaces]
 
-    # Determine total price
+    @response = {
+      :suburb => @suburb,
+      :bedrooms => @bedrooms,
+      :sqm => @sqm,
+      :parking => @park
+    }
 
-    @prices = @suburb.prices[0].mean_b3 * @bedrooms * @bth * @sqm * @dist * @park
-    User.create({:email => params[:email]})
-    # Suburb.where({:name => params[:suburb]})
-    # @prices = @suburb.prices
+    render :json => @response
+    #
+    #
+    # @bedrooms = params[:bedrooms]
+    #
+    # @bth = params[:bathrooms]
+    #
+    # @sqm = params[:square_meters]
+    #
+    # @dist = params[:distance_from_transport]
+    #
+    # @park = params[:parking_spaces]
+    #
+    # # Determine total price
+    #
+    # @prices = @suburb.prices[0].mean_b3 * @bedrooms * @bth * @sqm * @dist * @park
+    # User.create({:email => params[:email]})
+    # # Suburb.where({:name => params[:suburb]})
+    # # @prices = @suburb.prices
+
   end
 
 end
