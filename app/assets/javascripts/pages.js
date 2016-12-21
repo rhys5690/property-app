@@ -162,6 +162,7 @@ $(document).ready(function() {
         $enterEmail.addClass("none");
 
         $(".global-stats").addClass("none");
+        $(".local-stats").removeClass("nonte");
 
         // var $displayResult = $(".display-result-property-value");
         // $displayResult.removeClass("none");
