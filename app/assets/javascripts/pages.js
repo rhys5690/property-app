@@ -168,8 +168,15 @@ $(document).ready(function() {
         // $displayResult.append("<p>" + postcode + "</p>");
 
         //Begin implementing Bar chart
-        var $displayPropertyValue = $(".local-stats");
-        $displayPropertyValue.removeClass("none");
+        var $displayPropertyContainer = $(".local-stats");
+        $displayPropertyContainer.removeClass("none");
+
+        // Display result value
+
+        $(".evaluation-container").append("<p> Your " + data.bedrooms + " bedroom property is worth $" + data.my_property_price);
+
+
+        console.log(data.my_property_price);
 
 
 
