@@ -314,7 +314,7 @@ s9 = Suburb.create( {
 p9_1 = Price.create( {
   :month => "Dec",
   :year => "2016",
-  :mean_b3 => 2225220,
+  :mean_b3 => 1900000,
   :mean_b4 => 2315000,
   :suburb_id => s9.id
 } )
@@ -322,7 +322,7 @@ p9_1 = Price.create( {
 p9_2 = Price.create( {
   :month => "Nov",
   :year => "2016",
-  :mean_b3 => 2225230,
+  :mean_b3 => 225203000,
   :suburb_id => s9.id
 } )
 
