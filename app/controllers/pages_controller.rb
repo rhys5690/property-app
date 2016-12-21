@@ -25,20 +25,21 @@ class PagesController < ApplicationController
       latest_price = suburb.prices[0].mean_b3
       current_suburb_price_array = [suburb, latest_price]
       @suburb_price_array.push(current_suburb_price_array)
-
+      # puts "line 28: #{suburb.name} - #{current_suburb_price_array}"
       # interate through all prices in each suburb
       current_suburb_price_history_array = Array.new
       current_suburb_price_history = suburb.prices
       current_suburb_price_history.each do |price|
-        monthly_price = price.mean_b2
+        monthly_price = price.mean_b3
         month_name = price.suburb.name
         month_name_and_price = [month_name, monthly_price]
         current_suburb_price_history_array.push(month_name_and_price)
+        # puts "line 37: #{suburb.name} - #{month_name_and_price}"
+
       end
       @suburb_price_history_array.push(current_suburb_price_history_array)
 
     end
-
     # Find the global previous month average price
 
     @previous_month_average_array = Price.where({:month => "Nov"}).pluck(:mean_b3)
