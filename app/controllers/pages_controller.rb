@@ -97,16 +97,16 @@ class PagesController < ApplicationController
 
     # ------------------ End of Local stats section --------------------------
 
-
-
   end
 
   def search
+
+    UserMailer.results(params[:email]).deliver_now
     # Apply modifiers prices
     # look up postgres ILIKE (case insesnsitive database queries)
     @suburb = Suburb.where({:name => params[:suburb]}).first
     @bedrooms = params[:bedrooms]
-    
+
 
     @sqm = params[:square_meters]
     @park = params[:parking_spaces]
@@ -137,6 +137,8 @@ class PagesController < ApplicationController
     # User.create({:email => params[:email]})
     # # Suburb.where({:name => params[:suburb]})
     # # @prices = @suburb.prices
+
+
 
   end
 
