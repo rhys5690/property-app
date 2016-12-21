@@ -187,6 +187,12 @@ class PagesController < ApplicationController
 
     @my_property_price = @suburb_hash.prices[0].mean_b3 * (@bathrooms_modi.to_f) * (@bedrooms_modi.to_f) * (@parking_spaces_modi.to_f) * (@sqm_modi.to_f) * (@distance_from_transport_modi.to_f)
 
+
+
+    @my_suburb_current_price = @suburb.price[0].mean_b3
+    puts "The price of my property is: #{@my_suburb_current_price}"
+
+
     @response = {
       :suburb_hash => @suburb_hash,
       :suburb => @suburb,
@@ -198,7 +204,7 @@ class PagesController < ApplicationController
       :house_number => @house_number,
       :distance_from_transport => @distance_from_transport,
       :my_property_price => @my_property_price
-
+      # rails "c"
 
     }
     # binding.pry
