@@ -148,7 +148,7 @@ class PagesController < ApplicationController
     elsif @sqm_int >= 200 && @sqm_int <250
       @sqm_modi = @sqm_250_300
     else
-      @sqm_modi = @ "sqm more than 150"
+      @sqm_modi = "sqm more than 150"
     end
 
     @response = {
