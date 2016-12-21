@@ -1,8 +1,7 @@
 <div class="logo">
   <br>
   <img src="http://res.cloudinary.com/esthertan/image/upload/c_scale,h_50/v1482109339/Red_property_icon_k8lnbp.png">
-  <video playsinline autoplay muted loop ="http://res.cloudinary.com/esthertan/video/upload/c_fill,h_500,w_1200/v1482276668/residential-neighborhood_h9wsw8ogg_WL_online-video-cutter.com_pct9bu.mp4">
-</video>
+
   <h1>Property App</h1>
   <br>
   <h2>How much is my property worth ?</h2>
@@ -97,7 +96,7 @@
     <div class="col s4 global-stats-box">
       <p class="global-stats-label">Current Average Price Sydney </p>
       <p id="global-current-price">
-        $<%= number_with_delimiter(@current_month_average, :precision => 1, :delimiter => ",") %>
+        $<%= number_with_delimiter(@current_month_average*0.7, :precision => 0, :delimiter => ",") %>
       </p>
     </div>
     <div class="col s4 global-stats-box">
@@ -109,7 +108,7 @@
     <div class="col s4 global-stats-box">
       <p class="global-stats-label"> Next Month Projected Value</p>
       <p>
-        $<%= number_with_precision(@projected_growth_value, :precision => 0, :delimiter => ",") %>
+        $<%= number_with_precision(@projected_growth_value*0.7, :precision => 0, :delimiter => ",") %>
       </p>
     </div>
   </div>
@@ -117,21 +116,15 @@
   <!-- ================== end of first row ================ -->
   <!-- ================== start of second row ================ -->
   <div class="row">
-    <!-- <div class="col s4 global-suburb-list">
+    <div class="col s4 global-suburb-list">
       <p class="global-stats-label">Price by Suburb</p>
       <% @suburb_price_history_array.each do |suburb| %>
         <p><%= "#{suburb[0][0]} - $#{suburb[0][1]}" %></p>
       <% end %>
-    </div> -->
-    <div class="col s1">
-
     </div>
-    <div class="col s10 global-chart-section">
-      <h4>Average Price by Suburb</h4>
-      <canvas class="testChart" id="myChart" width="250" height="80"></canvas>
-    </div>
-    <div class="col s1">
-
+    <div class="col s8 global-chart-section">
+      <h4>Some Chart</h4>
+      <canvas class="testChart" id="myChart" width="150" height="80"></canvas>
     </div>
   </div>
 
@@ -142,18 +135,17 @@
   <h3>Market Mood</h3>
   <div class="row mood-row">
     <div class="col s4">
+      <img class="home-owner-face" src="http://4.bp.blogspot.com/-kudHVX3lQ9E/VU3XR07CoYI/AAAAAAAAD0o/uEIQKPPzfvs/s1600/risa.png" alt="">
       <p>Bill the Home Owner</p>
-      <%= image_tag("happy.png", :class =>"homr-owner-face animate-face")%>
-
     </div>
     <div class="col s4">
+      <img class="investor-face" src="http://4.bp.blogspot.com/-kudHVX3lQ9E/VU3XR07CoYI/AAAAAAAAD0o/uEIQKPPzfvs/s1600/risa.png" alt="">
       <p>Roger the Investor</p>
-      <%= image_tag("happy.png", :class =>"investor-face animate-face")%>
     </div>
     <div class="col s4">
+      <img class="renter-face"
+      src="https://image.freepik.com/free-icon/crying-emoticon-face_318-48236.jpg" alt="">
       <p>Groucho the Renter</p>
-      <%= image_tag("sad.jpg", :class =>"renter-face animate-face")%>
-
     </div>
   </div>
   <!-- ================== end of third row ================ -->
@@ -168,13 +160,16 @@
 <br>
 
 <div class="local-stats">
-  <h3>Local Stats Section</h3>
+  <h3>Your Property Stats</h3>
+
 <!-- =============== start of first row ===================  -->
 <!-- Rhy's Row -->
 <div class="row local-row1">
   <div class="col s2">
+    <div class="your-property-stats"></div>
   </div>
   <div class="col s5">
+    <canvas class="rhysChart" id="rhysChart" width="150" height="200"></canvas>
   </div>
   <div class="col s5">
 
@@ -185,21 +180,16 @@
 <!-- =============== start of second row ===================  -->
 <!--  Steve's row stay the fuck out -->
 <div class="row local-row2">
-  <div class="col s4">
-
-  </div>
-  <div class="col s4 demographics">
-    <h5>Local Demographics</h5>
-    <canvas class="pie-chart" id="demographics" width="300" height="300"></canvas>
-  </div>
-  <div class="col s4"></div>
+  <div class="col s6"></div>
+  <div class="col s6"></div>
 </div>
 <!-- =============== end of second row ===================  -->
 <!-- =============== start of third row ===================  -->
-<h4>3 and 4 bedroom homes V 2 and 3 bedroom units</h4>
-  <div class="col 4-local-stats">
-  <canvas class="bubbleChart" id="myBubbleChart" width="850" height="140"></canvas>
-</div>
+<div class="row local-row3">
+  <div class="col 4"></div>
+  <div class="col 4"></div>
+  <div class="col 4"></div>
+
 </div>
 <!-- =============== end of third row ===================  -->
 
