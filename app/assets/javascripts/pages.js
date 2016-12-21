@@ -209,12 +209,87 @@ $(document).ready(function() {
 
     }, 1000);
 
+// --------------------------- start of global section ------------------------
+// Using the core $.ajax() method
+$.ajax({
+    // The URL for the request
+    url: "/",
+    // The type of request
+    type: "GET",
+    // The type of data we expect back
+    dataType : "json",
+    // The data to send (will be converted to a query string and added to the URL)
+
+    // Code to run if the request succeeds.
+    // The responseText is passed to the 'success' function as the 'data' argument
+    success: function( data ) {
+      console.log(data);
+    },
+
+    // Code to run if the request fails.
+    // Parameters: The request (xhr), the status code of the request (status) and the error thrown (errorThrown) are passed to the 'error' function as arguments
+    error: function( xhr, status, errorThrown ) {
+        alert( "Sorry, there was a problem!" );
+        console.log( "Error: " + errorThrown );
+        console.log( "Status: " + status );
+        console.dir( xhr );
+    },
+    // Code to run when the request is completed, regardless of success or failure
+    complete: function( xhr, status ) {
+        console.log( "The request is complete." );
+    }
+
+});
 
 
+
+
+// --------------------------- start of bar chart -----------------------------
+    var a = 200;
+    var ctx = document.getElementById("myChart");
+    var myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+            datasets: [{
+                label: '# of Votes',
+                data: [a, 19, 3, 5, 2, 3],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255,99,132,1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero:true
+                    }
+                }]
+            }
+        }
+    });
+
+
+// ------------------------- end of bar chart --------------------------------
     // $<%= number_with_delimiter(@current_month_average*0.7, :precision => 0, :delimiter => ",") %>
 
 
-    // --------- Start of Global Emotion Section ---------------------
+// ---------------------- Start of Global Emotion Section ---------------------
 
     function animateEmotion() {
         // $("#happy-face").css("margin-top","0");
@@ -240,9 +315,9 @@ $(document).ready(function() {
 
 
 
-    // --------- End of Global Emotion Section ------------------------
+// ------------------ End of Global Emotion Section ------------------------
 
 
-    // ------- end of Steve section ------------------------
+// ----------------------------- end of Steve section ------------------------
 
 });
