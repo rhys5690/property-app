@@ -173,7 +173,6 @@ $(document).ready(function() {
 
   var globalCurrentPrice = setInterval( function(){
       $("#global-current-price");
-      console.log("Hello Worl");
 
   }, 1000);
 
