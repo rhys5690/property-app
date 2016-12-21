@@ -157,7 +157,9 @@ $(document).ready(function() {
         // there's a variable in this function called data that we can access.
         // var suburb = data.suburb.name;
         // var postcode = data.suburb.postcode;
-        $enterEmail.addClass("none");
+
+        var $enterEmail = $(".enter-email");
+        $enterEmail.removeClass("none");
 
         $(".global-stats").addClass("none");
 
@@ -167,7 +169,7 @@ $(document).ready(function() {
 
         //Begin implementing Bar chart
 
-        var data = {
+        var dataTest = {
             labels: ["January", "February", "March", "April", "May", "June", "July"],
             datasets: [{
                 label: "My First dataset",
@@ -191,16 +193,15 @@ $(document).ready(function() {
                 data: [65, 59, 80, 81, 56, 55, 40],
             }]
         };
-
         var myBarChart = new Chart(ctx, {
             type: 'bar',
-            data: data,
+            data: dataTest,
             options: options
         });
 
         var $displayPropertyValue = $(".local-stats");
         $displayPropertyValue.removeClass("none");
-        $displayPropertyValue.append(data);
+        $displayPropertyValue.append(dataTest);
 
 
 

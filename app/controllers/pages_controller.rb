@@ -166,7 +166,7 @@ class PagesController < ApplicationController
     @distance_from_transport_int = @distance_from_transport.to_i
     if @distance_from_transport_int <= 1
       @distance_from_transport_modi = @dist_0_1
-    elsif @distance_from_transport >1 && @distance_from_transport <= 2
+    elsif @distance_from_transport_int > 1 && @distance_from_transport_int <= 2
       @distance_from_transport_modi = @dist_1_2
     else
       @distance_from_transport_modi = @dist_2_more
@@ -186,7 +186,7 @@ class PagesController < ApplicationController
     end
 
     @my_property_price = @suburb_hash.prices[0].mean_b3 * (@bathrooms_modi.to_f) * (@bedrooms_modi.to_f) * (@parking_spaces_modi.to_f) * (@sqm_modi.to_f) * (@distance_from_transport_modi.to_f)
-    
+
     @response = {
       :suburb_hash => @suburb_hash,
       :suburb => @suburb,
@@ -216,8 +216,7 @@ class PagesController < ApplicationController
     # @park = params[:parking_spaces]
     #
     # # Determine total price
-    #
-    @prices = @suburb.prices[0].mean_b3 * @bedrooms * @bth * @sqm * @dist * @park
+    @prices = @suburb_hash.prices[0].mean_b3 * @bedrooms.to_i * @bth.to_i * @sqm.to_i * @dist.to_i * @park.to_i
     # User.create({:email => params[:email]})
     # # Suburb.where({:name => params[:suburb]})
     # # @prices = @suburb.prices
