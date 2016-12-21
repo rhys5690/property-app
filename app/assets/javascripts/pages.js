@@ -221,6 +221,37 @@ $(document).ready(function() {
 
         //Suburb prices chart
 
+        var ctx = document.getElementById("rhysChart2");
+
+        var suburbRadarChart = new Chart(ctx, {
+            type: 'radar',
+            data: {
+                labels: ["Oatley", "Cronulla", "Balmain", "Mossman", "Redfern", "Rozelle", "Bankstown"],
+                datasets: [{
+                    label: "Suburb Averages",
+                    backgroundColor: "rgba(180, 99, 132, 0.2)",
+                    borderColor: "rgba(180, 45, 150, 1)",
+                    pointBackgroundColor: "rgba(179,181,198,1)",
+                    pointBorderColor: "#fff",
+                    pointHoverBackgroundColor: "#fff",
+                    pointHoverBorderColor: "rgba(179,181,198,1)",
+                    data: [20000000, 23000000, 2100000, 3200000, 2800000, 2300000, 1800000]
+                }, {
+                    label: "Suburb Projected Average",
+                    backgroundColor: "rgba(255,99,132,0.2)",
+                    borderColor: "rgba(255,99,132,1)",
+                    pointBackgroundColor: "rgba(255,99,132,1)",
+                    pointBorderColor: "#fff",
+                    pointHoverBackgroundColor: "#fff",
+                    pointHoverBorderColor: "rgba(255,99,132,1)",
+                    data: [28, 48, 40, 19, 96, 27, 100]
+                },
+            ]
+
+            }
+        });
+
+
 
         //  =========================== End Rhy's Area ================================
 
