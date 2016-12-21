@@ -248,6 +248,7 @@ $.ajax({
       var myChart = new Chart(ctx, {
           type: 'bar',
           data: {
+
               labels: [suburbNameArray[0], suburbNameArray[1], suburbNameArray[2], suburbNameArray[3], suburbNameArray[4], suburbNameArray[5],suburbNameArray[6],suburbNameArray[7],suburbNameArray[8],suburbNameArray[9]],
               datasets: [{
                   label: 'Average Price',
@@ -274,7 +275,7 @@ $.ajax({
                       'rgba(255, 159, 64, 1)',
                       'rgba(10, 40, 64, 1)',
                       'rgba(75, 192, 192, 1)',
-                      'rgba(255,99,132,1)'
+                      'rgba(255,59,212,1)'
                   ],
                   borderWidth: 1
               }]
@@ -308,11 +309,11 @@ $.ajax({
 
     function animateEmotion() {
         // $("#happy-face").css("margin-top","0");
-        $(".home-owner-face").animate({
-            marginTop: -10
+        $(".animate-face").animate({
+            marginTop: 20
         }, 1000, function() {
-            $(".home-owner-face").animate({
-                marginTop: 0
+            $(".animate-face").animate({
+                marginTop: 10
             }, 1000, animateEmotion);
         });
 
