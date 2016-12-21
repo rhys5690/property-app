@@ -4,8 +4,32 @@ var displayEnterEmail = function() {
     var $enterEmail = $(".enter-email");
     $enterEmail.removeClass("none");
 
+    var $submitForm = $(".submit-form");
+
+        $submitForm.on("submit", function(e) {
+
+            e.preventDefault();
+            $enterEmail.addClass("none");
+            var $displayResult = $(".display-result-property-value");
+            $displayResult.removeClass("none");
 
 
+        });
+};
+
+var displayEnterParking = function() {
+
+    var $enterParking = $(".enter-parking-spaces");
+    $enterParking.removeClass("none");
+
+    var $eighthPhase = $(".eighth_phase");
+
+    $eighthPhase.on("click", function(e) {
+        e.preventDefault();
+        $enterParking.addClass("none");
+
+        displayEnterEmail();
+    });
 };
 
 var displayEnterSMeters = function() {
@@ -19,7 +43,7 @@ var displayEnterSMeters = function() {
         e.preventDefault();
         $enterSMeters.addClass("none");
 
-        displayEnterEmail();
+        displayEnterParking();
     });
 };
 
@@ -157,14 +181,14 @@ function animateEmotion(){
 }
 animateEmotion();
 
-function animateEmotionInvestor(){
-  // $("#happy-face").css("margin-top","0");
-  $(".investor-face").animate({marginTop:+10}, 1000, function(){
-      $(".investor-face").animate({marginTop:0},1000,animateEmotionInvestor);
-  });
-
-}
-animateEmotionInvestor();
+// function animateEmotionInvestor(){
+//   // $("#happy-face").css("margin-top","0");
+//   $(".investor-face").animate({marginTop:+10}, 1000, function(){
+//       $(".investor-face").animate({marginTop:0},1000,animateEmotionInvestor);
+//   });
+//
+// }
+// animateEmotionInvestor();
 
 
 
