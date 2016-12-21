@@ -105,18 +105,63 @@ class PagesController < ApplicationController
   def search
     # Apply modifiers prices
     # look up postgres ILIKE (case insesnsitive database queries)
-    @suburb = Suburb.where({:name => params[:suburb]}).first
+    @suburb_hash = Suburb.where({:name => params[:suburb]}).first
+    @suburb = params[:suburb]
     @bedrooms = params[:bedrooms]
     @sqm = params[:square_meters]
-    @park = params[:parking_spaces]
+    @parking_spaces = params[:parking_spaces]
+    @bathrooms = params[:bathrooms]
+    @street_name = params[:street_name]
+    @house_number = params[:house_number]
+    @distance_from_transport = params[:distance_from_transport]
+
+    case @bedrooms
+    when "1"
+      @bedrooms_modi = @b1_modi
+    when "2"
+      @bedrooms_modi = @b2_modi
+    when "3"
+      @bedrooms_modi = @b3_modi
+    when "4"
+      @bedrooms_modi = @b4_modi
+    when "5"
+      @bedrooms_modi = @b5_modi
+    else
+      @bedrooms_modi = @bmore_modi
+    end
+
+    @sqm_int = @sqm.to_i
+    if @sqm_int < 100
+      @sqm_modi = @sqm_0_100
+    elsif @sqm_int >= 100 && @sqm_int <150
+      @sqm_modi = @sqm_100_150
+    elsif @sqm_int >= 150 && @sqm_int <200
+      @sqm_modi = @sqm_150_200
+    elsif @sqm_int >= 200 && @sqm_int <250
+      @sqm_modi = @sqm_250_300
+    elsif @sqm_int >= 250 && @sqm_int <300
+      @sqm_modi = @sqm_250_300
+    elsif @sqm_int >= 300 && @sqm_int <350
+      @sqm_modi = @sqm_250_300
+    elsif @sqm_int >= 200 && @sqm_int <250
+      @sqm_modi = @sqm_250_300
+    else
+      @sqm_modi = @ "sqm more than 150"
+    end
 
     @response = {
+      :suburb_hash => @suburb_hash,
       :suburb => @suburb,
       :bedrooms => @bedrooms,
       :sqm => @sqm,
-      :parking => @park
-    }
+      :parking_spaces => @parking_spaces,
+      :bathrooms => @bathrooms,
+      :street_name => @street_name,
+      :house_number => @house_number,
+      :distance_from_transport => @distance_from_transport
 
+    }
+    # binding.pry
     render :json => @response
     #
     #
