@@ -70,7 +70,7 @@ class PagesController < ApplicationController
     bth_base = 1
     @bth1_modi = bth_base * 0.96
     @bth2_modi = bth_base * 1.05
-    @bth3_modi = bth_base *
+    @bth3_modi = bth_base * 1.055
     @bth4_more_modi = bth_base * 1.06
 
     sqm_base = 1
