@@ -210,6 +210,12 @@ $(document).ready(function() {
     }, 1000);
 
 // --------------------------- start of global section ------------------------
+
+
+
+
+// ------------------start of charts in global section -----------------------------
+
 // Using the core $.ajax() method
 $.ajax({
     // The URL for the request
@@ -222,67 +228,76 @@ $.ajax({
 
     // Code to run if the request succeeds.
     // The responseText is passed to the 'success' function as the 'data' argument
-    success: function( data ) {
-      console.log(data);
-    },
+}).done( function (data) {
+  // ------------ start of chart js stuff -------------------------------------
 
-    // Code to run if the request fails.
-    // Parameters: The request (xhr), the status code of the request (status) and the error thrown (errorThrown) are passed to the 'error' function as arguments
-    error: function( xhr, status, errorThrown ) {
-        alert( "Sorry, there was a problem!" );
-        console.log( "Error: " + errorThrown );
-        console.log( "Status: " + status );
-        console.dir( xhr );
-    },
-    // Code to run when the request is completed, regardless of success or failure
-    complete: function( xhr, status ) {
-        console.log( "The request is complete." );
-    }
+
+
+      //  for loop to find array of suburb names and array of prices (Dec)
+      var suburbNameArray = [];
+      var suburbPriceArray = [];
+      for (i=0; i<data.suburb_price_hash.length; i++){
+
+        suburbNameArray.push(data.suburb_price_hash[i][0][0]);
+        suburbPriceArray.push(data.suburb_price_hash[i][0][1]);
+      }
+
+
+
+      var ctx = document.getElementById("myChart");
+      var myChart = new Chart(ctx, {
+          type: 'bar',
+          data: {
+              labels: [suburbNameArray[0], suburbNameArray[1], suburbNameArray[2], suburbNameArray[3], suburbNameArray[4], suburbNameArray[5],suburbNameArray[6],suburbNameArray[7],suburbNameArray[8],suburbNameArray[9]],
+              datasets: [{
+                  label: 'Average Price',
+                  data: [suburbPriceArray[0], suburbPriceArray[1], suburbPriceArray[2], suburbPriceArray[3], suburbPriceArray[4], suburbPriceArray[5],suburbPriceArray[6],suburbPriceArray[7],suburbPriceArray[8],suburbPriceArray[9]],
+                  backgroundColor: [
+                      'rgba(255, 99, 132, 0.2)',
+                      'rgba(54, 162, 235, 0.2)',
+                      'rgba(255, 206, 86, 0.2)',
+                      'rgba(75, 192, 192, 0.2)',
+                      'rgba(153, 102, 255, 0.2)',
+                      'rgba(255, 159, 64, 0.2)',
+                      'rgba(255, 99, 132, 0.2)',
+                      'rgba(54, 162, 235, 0.2)',
+                      'rgba(255, 206, 86, 0.2)',
+                      'rgba(153, 102, 255, 0.2)'
+                  ],
+                  borderColor: [
+                      'rgba(255,99,132,1)',
+                      'rgba(54, 162, 235, 1)',
+                      'rgba(255, 206, 86, 1)',
+                      'rgba(75, 192, 192, 1)',
+                      'rgba(153, 102, 255, 1)',
+                      'rgba(44, 159, 64, 1)',
+                      'rgba(255, 159, 64, 1)',
+                      'rgba(10, 40, 64, 1)',
+                      'rgba(75, 192, 192, 1)',
+                      'rgba(255,99,132,1)'
+                  ],
+                  borderWidth: 1
+              }]
+          },
+          options: {
+              scales: {
+                  yAxes: [{
+                      ticks: {
+                          beginAtZero:true
+                      }
+                  }]
+              }
+          }
+      });
 
 });
+// ------------ end of chart js stuff on global section-------------------------------------
 
 
 
 
-// --------------------------- start of bar chart -----------------------------
-    var a = 200;
-    var ctx = document.getElementById("myChart");
-    var myChart = new Chart(ctx, {
-        type: 'bar',
-        data: {
-            labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
-            datasets: [{
-                label: '# of Votes',
-                data: [a, 19, 3, 5, 2, 3],
-                backgroundColor: [
-                    'rgba(255, 99, 132, 0.2)',
-                    'rgba(54, 162, 235, 0.2)',
-                    'rgba(255, 206, 86, 0.2)',
-                    'rgba(75, 192, 192, 0.2)',
-                    'rgba(153, 102, 255, 0.2)',
-                    'rgba(255, 159, 64, 0.2)'
-                ],
-                borderColor: [
-                    'rgba(255,99,132,1)',
-                    'rgba(54, 162, 235, 1)',
-                    'rgba(255, 206, 86, 1)',
-                    'rgba(75, 192, 192, 1)',
-                    'rgba(153, 102, 255, 1)',
-                    'rgba(255, 159, 64, 1)'
-                ],
-                borderWidth: 1
-            }]
-        },
-        options: {
-            scales: {
-                yAxes: [{
-                    ticks: {
-                        beginAtZero:true
-                    }
-                }]
-            }
-        }
-    });
+
+
 
 
 // ------------------------- end of bar chart --------------------------------

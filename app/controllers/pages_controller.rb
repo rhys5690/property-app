@@ -56,7 +56,10 @@ class PagesController < ApplicationController
 
     # Render as JSON
     @response = {
-      :suburb_price_hash => @suburb_price_history_array
+      :suburb_price_hash => @suburb_price_history_array,
+      :projected_growth_value => @projected_growth_value,
+      :previous_month_average => @previous_month_average,
+      :current_month_average => @current_month_average
     }
 
     respond_to do |format|

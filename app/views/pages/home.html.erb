@@ -116,15 +116,21 @@
   <!-- ================== end of first row ================ -->
   <!-- ================== start of second row ================ -->
   <div class="row">
-    <div class="col s4 global-suburb-list">
+    <!-- <div class="col s4 global-suburb-list">
       <p class="global-stats-label">Price by Suburb</p>
       <% @suburb_price_history_array.each do |suburb| %>
         <p><%= "#{suburb[0][0]} - $#{suburb[0][1]}" %></p>
       <% end %>
+    </div> -->
+    <div class="col s3">
+
     </div>
-    <div class="col s8 global-chart-section">
-      <h4>Some Chart</h4>
+    <div class="col s6 global-chart-section">
+      <h4>Average Price by Suburb</h4>
       <canvas class="testChart" id="myChart" width="150" height="80"></canvas>
+    </div>
+    <div class="col s3">
+
     </div>
   </div>
 
@@ -179,7 +185,7 @@
 <!--  Steve's row stay the fuck out -->
 <div class="row local-row2">
   <div class="col s6">
-    
+
   </div>
   <div class="col s6"></div>
 </div>
