@@ -16,16 +16,19 @@
 // @import 'foundation';
 
 // ------------ Logo section --------
-h2 {
-  font-size: 30px;
-  font-style: 'Montserrat', sans-serif;
-  color: white;
-}
+
 
 .logo-container {
   text-align: center;
+  display: block;
+  margin: 0 auto;
 }
 
+.logo {
+  display: block;
+  margin: 0 auto;
+
+}
 
 
 //------- end logo section
@@ -33,14 +36,13 @@ h2 {
 // ------- start evaluation container
 
 .evaluation-container {
-  width: 80vw;
+  width: 30vw;
   height: 30vh;
   background-color: white;
   opacity: 0.5;
   margin: 0 auto;
   border: 3px solid red;
   font-weight: bold;
-
   vertical-align: middle;
   padding-top: 2%;
 }
@@ -101,8 +103,6 @@ p.global-stats-label {
   margin-top: -10px;
 }
 
-
-
 // ------ end of global stats ------------
 
 // -------- start of local stats section-------
@@ -129,7 +129,15 @@ p.global-stats-label {
 
 // -------- end of local stats section ---------
 
-
+// video.halfscreen {
+// position: fixed;
+// top: 50%;
+// min-width: 100%;
+// min-height: 50%;
+// width: auto;
+// background: url ("http://res.cloudinary.com/esthertan/video/upload/c_fill,h_500,w_1200/v1482276668/residential-neighborhood_h9wsw8ogg_WL_online-video-cutter.com_pct9bu.mp4");
+// z-index: -10;
+// }
 
 
 body {
@@ -145,6 +153,20 @@ h1 {
   font-family: 'Montserrat', sans-serif;
   font-size: 30px;
   font-style: bold;
+}
+
+
+h5 {
+  color: white;
+}
+h2 {
+color: white;
+font-size: 20px;
+}
+
+h3 {
+color: red;
+font-size: 20px;
 }
 
 p {
@@ -197,9 +219,14 @@ label {
   color: black;
 }
 
-button.first_phase {
-
+div.logo {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
 }
+
+
+
 
 
 
