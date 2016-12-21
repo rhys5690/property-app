@@ -101,7 +101,7 @@ class PagesController < ApplicationController
 
   def search
 
-    UserMailer.results(params[:email]).deliver_now
+    # UserMailer.results(params[:email]).deliver_now
     # Apply modifiers prices
     # look up postgres ILIKE (case insesnsitive database queries)
     @suburb = Suburb.where({:name => params[:suburb]}).first
