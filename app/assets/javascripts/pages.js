@@ -1,11 +1,35 @@
 
+
+
 var displayEnterEmail = function() {
 
     var $enterEmail = $(".enter-email");
     $enterEmail.removeClass("none");
 
+    // var $submitForm = $(".submit-form");
+    // $submitForm.on("submit", function(e) {
+    //     e.preventDefault();
+    //     $enterEmail.addClass("none");
+    //     var $displayResult = $(".display-result-property-value");
+    //     $displayResult.removeClass("none");
+    // });
 
 
+};
+
+var displayEnterParking = function() {
+
+    var $enterParking = $(".enter-parking-spaces");
+    $enterParking.removeClass("none");
+
+    var $eighthPhase = $(".eighth_phase");
+
+    $eighthPhase.on("click", function(e) {
+        e.preventDefault();
+        $enterParking.addClass("none");
+
+        displayEnterEmail();
+    });
 };
 
 var displayEnterSMeters = function() {
@@ -19,7 +43,7 @@ var displayEnterSMeters = function() {
         e.preventDefault();
         $enterSMeters.addClass("none");
 
-        displayEnterEmail();
+        displayEnterParking();
     });
 };
 
@@ -131,6 +155,18 @@ $(document).ready(function() {
 
     });
 
+    $("#suburb-form").on("ajax:success", function(e, data, status, xhr) {
+        console.log(data);
+        // there's a variable in this function called data that we can access.
+        var suburb = data.suburb.name;
+        var postcode = data.suburb.postcode;
+        $enterEmail.addClass("none");
+        var $displayResult = $(".display-result-property-value");
+        $displayResult.removeClass("none");
+        $displayResult.append("<p>" + postcode + "</p>");
+
+    });
+
 
 // ------- start of Steve section ---------------------
 
@@ -156,6 +192,15 @@ function animateEmotion(){
 
 }
 animateEmotion();
+
+// function animateEmotionInvestor(){
+//   // $("#happy-face").css("margin-top","0");
+//   $(".investor-face").animate({marginTop:+10}, 1000, function(){
+//       $(".investor-face").animate({marginTop:0},1000,animateEmotionInvestor);
+//   });
+//
+// }
+// animateEmotionInvestor();
 
 
 

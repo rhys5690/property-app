@@ -11,7 +11,7 @@
 
     <div class="enter-suburb form none">
 
-    <%= form_tag("/search", method: "get") do %>
+    <%= form_tag("/search", method: "get", :remote => true, :id => "suburb-form") do %>
       <%= label_tag("Enter the property's suburb name") %>
       <%= text_field_tag(:suburb) %>
       <%= button_tag("Next", :class => "first_phase") %>
@@ -48,16 +48,30 @@
     </div>
 
     <div class="enter-square-meters form none">
-      <%= label_tag("Enter the number of square meters") %>
+      <%= label_tag("Enter how many square meters the property is") %>
       <%= text_field_tag(:square_meters) %>
       <%= button_tag("Next", :class => "seventh_phase") %>
+    </div>
+
+    <div class="enter-parking-spaces form none">
+      <%= label_tag("Enter the number of parking spaces the property contains") %>
+      <%= text_field_tag(:parking_spaces) %>
+      <%= button_tag("Next", :class => "eighth_phase") %>
     </div>
 
     <div class="enter-email form none">
       <%= label_tag("Enter your email") %>
       <%= text_field_tag(:email) %>
-      <%= submit_tag("Next") %>
+      <%= submit_tag("Next", :class => "submit-form") %>
     <% end %>
+    </div>
+    <!-- Display result peoperty value inside homepage -->
+    <div class="display-result-property-value none">
+      
+
+
+      <%#= @prices %>
+
     </div>
   </div>
 </div>
