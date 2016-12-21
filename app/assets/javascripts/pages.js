@@ -168,16 +168,33 @@ $(document).ready(function() {
         // $displayResult.append("<p>" + postcode + "</p>");
 
         //Begin implementing Bar chart
-        var $displayPropertyContainer = $(".local-stats");
-        $displayPropertyContainer.removeClass("none");
 
         // Display result value
 
         $(".evaluation-container").append("<p> Your " + data.bedrooms + " bedroom property is worth $" + data.my_property_price);
 
 
-        console.log(data.my_property_price);
+        //  ===========================  Start of Rhy's Area ================================
 
+
+
+        //  =========================== End Rhy's Area ================================
+
+
+        //  =========================== Start of Steve's Area ================================
+
+
+
+        //  =========================== end of Steve's Area ================================
+
+
+
+        //  =========================== Start of Esther's Area ================================
+
+
+
+
+        //  =========================== End of Esther's Area ================================
 
 
 
