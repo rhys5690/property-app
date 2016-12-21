@@ -96,7 +96,7 @@
     <div class="col s4 global-stats-box">
       <p class="global-stats-label">Current Average Price Sydney </p>
       <p id="global-current-price">
-        $<%= number_with_delimiter(@current_month_average*0.7, :precision => 0, :delimiter => ",") %>
+        $<%= number_with_delimiter(@current_month_average, :precision => 1, :delimiter => ",") %>
       </p>
     </div>
     <div class="col s4 global-stats-box">
@@ -108,7 +108,7 @@
     <div class="col s4 global-stats-box">
       <p class="global-stats-label"> Next Month Projected Value</p>
       <p>
-        $<%= number_with_precision(@projected_growth_value*0.7, :precision => 0, :delimiter => ",") %>
+        $<%= number_with_precision(@projected_growth_value, :precision => 0, :delimiter => ",") %>
       </p>
     </div>
   </div>
