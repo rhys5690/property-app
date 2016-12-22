@@ -6,7 +6,7 @@ class UserMailer < ApplicationMailer
 
     @my_property_price = result
     @email = email
-    mail( :to => @email, :subject => "Welcome to the realestate kings", :bcc => "rhys5690@gmail.com" )
+    mail( :to => @email, :subject => "Your property value is...", :bcc => "rhys5690@gmail.com" )
 
     # send welcome.html.erb to @user
   end
