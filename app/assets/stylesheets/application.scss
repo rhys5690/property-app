@@ -15,6 +15,19 @@
  */
 // @import 'foundation';
 
+// ---------- global section ------------
+
+html {
+  background-color: #FBE2B4;
+}
+
+
+
+// ---------- end global section ----------
+
+
+
+
 // ------------ Logo section --------
 
 
@@ -30,6 +43,14 @@
 
 }
 
+nav {
+  height: 15vh;
+
+}
+
+#main-nav {
+  background-color: #FF4C65;
+}
 
 //------- end logo section
 
@@ -38,10 +59,9 @@
 .evaluation-container {
   width: 30vw;
   height: 30vh;
-  background-color: white;
-  opacity: 0.5;
-  margin: 0 auto;
-  border: 3px solid red;
+  background-color: #FBE2B4;
+  margin: 1.5vh auto;
+  border: 1px solid black;
   font-weight: bold;
   vertical-align: middle;
   padding-top: 2%;
