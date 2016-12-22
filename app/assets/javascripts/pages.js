@@ -160,6 +160,7 @@ $(document).ready(function() {
 
         var $enterEmail = $(".enter-email");
         $enterEmail.addClass("none");
+        $(".evaluation-container").addClass("none");
 
         $(".global-stats").addClass("none");
         $(".local-stats").removeClass("none");
