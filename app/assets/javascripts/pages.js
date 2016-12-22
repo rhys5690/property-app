@@ -254,14 +254,14 @@ $(document).ready(function() {
                     pointHoverBorderColor: "rgba(179,181,198,1)",
                     data: [854750, 1288000, 1770000, 1900000, 1500000, 1650000, 885000]
                 }, {
-                    label: "Suburb Projected Average",
+                    label: "Next Month Average Price",
                     backgroundColor: "rgba(255,99,132,0.2)",
                     borderColor: "rgba(255,99,132,1)",
                     pointBackgroundColor: "rgba(255,99,132,1)",
                     pointBorderColor: "#fff",
                     pointHoverBackgroundColor: "#fff",
                     pointHoverBorderColor: "rgba(255,99,132,1)",
-                    data: [28, 48, 40, 19, 96, 27, 100]
+                    data: [783805.75, 1181096, 1623090, 1742300, 1375500, 1513050, 811545]
                 },
             ]
 
