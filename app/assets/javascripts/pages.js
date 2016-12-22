@@ -225,34 +225,34 @@ $(document).ready(function() {
 
         //Suburb prices chart
         // data prep for chart2
-        var suburbsAll = data.suburb_all; // [ [suburb1], [suburb2], [suburb3],  ...     ]
-        console.log(suburbsAll);
-
-        var arrayDecPrices = [];
-        var arrayNovPrices = [];
-        var arrayOctPrices = [];
-        var arraySepPrices = [];
-
-        for (i=0; i<suburbsAll.length; i++){
-          arrayDecPrices.push( suburbsAll[i].prices[0].mean_b3   );
-        }
-        console.log(arrayDecPrices);
+        // var suburbsAll = data.suburb_all; // [ [suburb1], [suburb2], [suburb3],  ...     ]
+        // console.log(suburbsAll);
+        //
+        // var arrayDecPrices = [];
+        // var arrayNovPrices = [];
+        // var arrayOctPrices = [];
+        // var arraySepPrices = [];
+        //
+        // for (i=0; i<suburbsAll.length; i++){
+        //   arrayDecPrices.push( suburbsAll[i].prices[0].mean_b3   );
+        // }
+        // console.log(arrayDecPrices);
 
         var ctx3 = document.getElementById("rhysChart2");
 
         var suburbRadarChart = new Chart(ctx3, {
             type: 'radar',
             data: {
-                labels: ["Oatley", "Cronulla", "Balmain", "Mossman", "Redfern", "Rozelle", "Bankstown"],
+                labels: ["Oatley", "Cronulla", "Balmain", "Chatswood", "Redfern", "Rozelle", "Bankstown"],
                 datasets: [{
-                    label: "Suburb Averages",
+                    label: "Suburb Average Price",
                     backgroundColor: "rgba(180, 99, 132, 0.2)",
                     borderColor: "rgba(180, 45, 150, 1)",
                     pointBackgroundColor: "rgba(179,181,198,1)",
                     pointBorderColor: "#fff",
                     pointHoverBackgroundColor: "#fff",
                     pointHoverBorderColor: "rgba(179,181,198,1)",
-                    data: [20000000, 23000000, 2100000, 3200000, 2800000, 2300000, 1800000]
+                    data: [854750, 1288000, 1770000, 1900000, 1500000, 1650000, 885000]
                 }, {
                     label: "Suburb Projected Average",
                     backgroundColor: "rgba(255,99,132,0.2)",
