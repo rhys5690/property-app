@@ -115,8 +115,6 @@ class PagesController < ApplicationController
     @park_4_more = park_base * 1.08
 
 
-
-    UserMailer.results(params[:email]).deliver_now
     # Apply modifiers prices
     # look up postgres ILIKE (case insesnsitive database queries)
     @suburb_hash = Suburb.where({:name => params[:suburb]}).first
@@ -241,7 +239,7 @@ class PagesController < ApplicationController
     # # Suburb.where({:name => params[:suburb]})
     # # @prices = @suburb.prices
 
-
+    UserMailer.results(params[:email], @my_property_price).deliver_now
 
   end
 
