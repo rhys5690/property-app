@@ -11,15 +11,42 @@
   // evaluation-container : position: relative
 // http://codepen.io/mrbadger/pen/KrmkaY
 
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,100,900);
 
+$red: #E1332D;
+$white: #fff;
 
 .Value-My-Property {
   text-align: center;
   margin: 0 auto;
   border-color: black;
-  background-color: ghostwhite;
-  color: red;
+  background-color: #FF4C65;
+  color: white;
   padding: 10px;
+
+
+  cursor: pointer;
+  display: block;
+  font-size:16px;
+  font-weight: 400;
+  line-height: 45px;
+  margin: 0 auto 2em;
+  max-width: 160px;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.Value-My-Property:hover {
+
+  background: lighten($red, 3%);
+  border: 1px solid darken($red, 4%);
+  box-shadow: 0px 2px 0 darken($red, 5%), 2px 4px 6px darken($red, 2%);
+  font-weight: 900;
+  letter-spacing: 1px;
+  transition: all 150ms linear;
 }
 
 .none {

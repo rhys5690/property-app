@@ -194,7 +194,7 @@ $(document).ready(function() {
 
         var ctx = document.getElementById("rhysChart");
         var rhysChart = new Chart(ctx, {
-            type: 'bar',
+            type: 'horizontalBar',
             data: {
 
                 labels: ["Your Property is worth $" + data.my_property_price],
@@ -296,12 +296,12 @@ $(document).ready(function() {
                 }]
         };
 
-        // var ctx = document.getElementById("demographics");
-        // var myDoughnutChart = new Chart(ctx, {
-        //   type: 'doughnut',
-        //   data: demographicsData,
-        //   options: {}
-        // });
+        var ctx4 = document.getElementById("demographics");
+        var myDoughnutChart = new Chart(ctx4, {
+          type: 'doughnut',
+          data: demographicsData,
+          options: {}
+        });
 
 
 
@@ -313,31 +313,31 @@ $(document).ready(function() {
         //  =========================== Start of Esther's Area ================================
 
 
-        var ctx2 = document.getElementById("myBubbleChart");
-        var myBubbleChart = new Chart(ctx2, {
-            type: 'bubble',
-            data: {
-
-                datasets: [{
-                    label: '3 bedroom & 4 bedroom homes V 2 & 3 bedroom units',
-                    data: [{
-                        x: [1770000, 1770000, 1280000, 1540000, 1500000, 1650000, 8850000, 1151000, 1900000, 680000],
-                        y: [2350000, 2350000, 1692000, 2000000, 2360000, 2070000, 9925000, 1365000, 2315000, 755000],
-                        r: 10
-                    }, {
-                        x: [1050555, 820000, 705000, 755750, 930000, 1150000, 790000, 950000, 412000],
-                        y: [1630000, 1027500, 854750, 1288000, 1200000, 1822500, 900000, 1628000, 542000],
-                        r: 10
-                    }],
-                    backgroundColor: "#b2b2b2",
-                    hoverBackgroundColor: "#b2b2b2",
-                }]
-            },
-            points: {
-                borderWidth: 1,
-                borderColor: 'rgb(0,0,0)'
-            }
-        });
+        // var ctx2 = document.getElementById("myBubbleChart");
+        // var myBubbleChart = new Chart(ctx2, {
+        //     type: 'bubble',
+        //     data: {
+        //
+        //         datasets: [{
+        //             label: '3 & 4 bedroom homes Vs 2 & 3 bedroom units',
+        //             data: [{
+        //                 x: [0.8, 0.7, -0.2, 0.34, -0.5, 0.3, 0.22, 0.12, 0.33, 0.44],
+        //                 y: [0.03, -0.5, 0.11, -0.88, -0.77, 0.66, 0.1, 0.22, 0.18, 0.22],
+        //                 r: 0.14
+        //             }, {
+        //                 x: [1050555, 820000, 705000, 755750, 930000, 1150000, 790000, 950000, 412000],
+        //                 y: [1630000, 1027500, 854750, 1288000, 1200000, 1822500, 900000, 1628000, 542000],
+        //                 r: 0.1
+        //             }],
+        //             backgroundColor: "#364ba0",
+        //             hoverBackgroundColor: "#dd0f49",
+        //         }]
+        //     },
+        //     points: {
+        //         borderWidth: 1,
+        //         borderColor: '#061f82'
+        //     }
+        // });
 
 
 
