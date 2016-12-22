@@ -221,13 +221,26 @@ $(document).ready(function() {
             }
         });
 
-        });
+
 
         //Suburb prices chart
+        // data prep for chart2
+        var suburbsAll = data.suburb_all; // [ [suburb1], [suburb2], [suburb3],  ...     ]
+        console.log(suburbsAll);
 
-        var ctx = document.getElementById("rhysChart2");
+        var arrayDecPrices = [];
+        var arrayNovPrices = [];
+        var arrayOctPrices = [];
+        var arraySepPrices = [];
 
-        var suburbRadarChart = new Chart(ctx, {
+        for (i=0; i<suburbsAll.length; i++){
+          arrayDecPrices.push( suburbsAll[i].prices[0].mean_b3   );
+        }
+        console.log(arrayDecPrices);
+
+        var ctx3 = document.getElementById("rhysChart2");
+
+        var suburbRadarChart = new Chart(ctx3, {
             type: 'radar',
             data: {
                 labels: ["Oatley", "Cronulla", "Balmain", "Mossman", "Redfern", "Rozelle", "Bankstown"],
@@ -332,9 +345,9 @@ $(document).ready(function() {
 
 
 
-    });
+    }); // closing tag for ajax success
 
-
+}); // closing tag for document on ready
     // ------- start of Steve section ---------------------
 
 
