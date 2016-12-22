@@ -18,7 +18,8 @@
 // ---------- global section ------------
 
 html {
-  background-color: #FBE2B4;
+  // background-color: #FBE2B4;
+  background-image: url('background.jpg');
 }
 
 
@@ -37,9 +38,9 @@ html {
   margin: 0 auto;
 }
 
-.logo {
-  display: block;
-  margin: 0 auto;
+.logo-image {
+  padding-top: 2vh;
+  width: 6vw;
 
 }
 
@@ -76,10 +77,9 @@ nav {
   width: 70vw;
 
   // height: 50vh;
-  border: 3px solid black;
+  border: 2px solid black;
 
   // height: 50vh;
-  border: 1px solid black;
   background-color: white;
   color: black;
   opacity: 1;
@@ -93,7 +93,7 @@ nav {
 }
 
 .global-stats-box {
-  border: 1px solid gainsboro;
+
   height: 28vh;
 }
 .global-stats-box p {
@@ -135,7 +135,7 @@ p.global-stats-label {
 
   // height: 50vh;
 
-  border: 3px solid black;
+  border: 2px solid black;
   background-color: white;
   color: black;
   font-weight: bold;
