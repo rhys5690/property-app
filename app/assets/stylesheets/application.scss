@@ -39,19 +39,29 @@ html {
 }
 
 .logo-image {
-  padding-top: 2vh;
-  width: 6vw;
 
+  width: 12vw;
+
+}
+.logo-text {
+  font-size: 3em;
+  vertical-align: middle;
 }
 
 nav {
-  height: 15vh;
+  height: 20vh;
 
 }
 
 #main-nav {
   background-color: #FF4C65;
+  vertical-align: middle;
 }
+#main-nav h1 {
+  display: inline;
+  margin-bottom: 3vh;
+}
+
 
 //------- end logo section
 
@@ -60,13 +70,15 @@ nav {
 .evaluation-container {
   width: 30vw;
   height: 30vh;
-  background-color: #FBE2B4;
-  margin: 1.5vh auto;
-  border: 1px solid black;
+  opacity: 1;
+  // background-color: #3B3A35;
+  margin: 0 auto;
+  margin-top: 5vh;
+  // border: 1px solid #F2EEB3;
   font-weight: bold;
   vertical-align: middle;
   padding-top: 2%;
-  position: relative
+  position: relative;
 }
 
 

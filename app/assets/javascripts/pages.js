@@ -147,6 +147,10 @@ $(document).ready(function() {
     var $valueMyProperty = $(".Value-My-Property");
 
     $valueMyProperty.on("click", function() {
+
+        // Add css to evaluation-container
+        $(".evaluation-container").css( {"backgroundColor":"white", "border":"solid 1px black"}).addClass("z-depth-4");
+        // end Add css to evaluation-container
         $valueMyProperty.addClass("none");
         displayEnterSuburb();
 
