@@ -172,8 +172,10 @@ $(document).ready(function() {
 
         // Display result value
 
-        $(".evaluation-container").append("<p> Your " + data.bedrooms + " bedroom property is worth $" + data.my_property_price + "</p>");
+        // $(".evaluation-container").append("<p> Your " + data.bedrooms + " bedroom property is worth $" + data.my_property_price + "</p>");
 
+        // edited above code to have property value show in local stats section
+        $(".my-property-value-container").append("<p> Your " + data.bedrooms + " bedroom property is worth $" + data.my_property_price + "</p>");
 
         //  ===========================  Start of Rhy's Area ================================
 
