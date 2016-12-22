@@ -149,7 +149,7 @@ $(document).ready(function() {
     $valueMyProperty.on("click", function() {
 
         // Add css to evaluation-container
-        $(".evaluation-container").css( {"backgroundColor":"white", "border":"solid 1px black"}).addClass("z-depth-4");
+        $(".evaluation-container").css( {"backgroundColor":"white", "border":"solid 1px black"}).addClass("z-depth-5");
         // end Add css to evaluation-container
         $valueMyProperty.addClass("none");
         displayEnterSuburb();
@@ -201,7 +201,8 @@ $(document).ready(function() {
             type: 'horizontalBar',
             data: {
 
-                labels: ["Your Property is worth $" + data.my_property_price],
+                // labels: ["Your Property is worth $" + data.my_property_price],
+                labels: [],
                 datasets: [{
                     label: 'Your Property Value',
                     data: [data.my_property_price],
@@ -278,6 +279,7 @@ $(document).ready(function() {
 
 
         //  =========================== Start of Steve's Area ================================
+
         var demographicsData = {
             labels: [
                 "Elderly",
@@ -351,6 +353,34 @@ $(document).ready(function() {
 
     }); // closing tag for ajax success
 
+
+//  ================ steve start ================
+$(".global-third-row").hover(function(){
+  $(".global-third-row").addClass("z-depth-5");
+}, function(){
+  $(".global-third-row").removeClass("z-depth-5");
+});
+
+$(".current-price").hover(function(){
+  $(".current-price").addClass("z-depth-5");
+}, function(){
+  $(".current-price").removeClass("z-depth-5");
+});
+$(".projected-percentage").hover(function(){
+  $(".projected-percentage").addClass("z-depth-5");
+}, function(){
+  $(".projected-percentage").removeClass("z-depth-5");
+});
+
+$(".projected-price").hover(function(){
+  $(".projected-price").addClass("z-depth-5");
+}, function(){
+  $(".projected-price").removeClass("z-depth-5");
+});
+
+
+
+// ================== steve end ==============
 }); // closing tag for document on ready
     // ------- start of Steve section ---------------------
 
@@ -379,6 +409,7 @@ $.ajax({
 }).done( function (data) {
   // ------------ start of chart js stuff -------------------------------------
 
+  // if (data.)
 
 
       //  for loop to find array of suburb names and array of prices (Dec)
@@ -480,6 +511,9 @@ $.ajax({
 
 
 // ------------------ End of Global Emotion Section ------------------------
+
+
+
 
 
 // ----------------------------- end of Steve section ------------------------
