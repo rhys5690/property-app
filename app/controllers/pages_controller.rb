@@ -1,7 +1,6 @@
 class PagesController < ApplicationController
 
   def home
-
     # ------------------ Start of global stats section --------------------------
 
     # The following code trys to find the total price for all suburbs
@@ -116,8 +115,6 @@ class PagesController < ApplicationController
     @park_4_more = park_base * 1.08
 
 
-
-    # UserMailer.results(params[:email]).deliver_now
     # Apply modifiers prices
     # look up postgres ILIKE (case insesnsitive database queries)
 
@@ -245,7 +242,7 @@ class PagesController < ApplicationController
     # # Suburb.where({:name => params[:suburb]})
     # # @prices = @suburb.prices
 
-
+    UserMailer.results(params[:email], @my_property_price).deliver_now
 
   end
 
