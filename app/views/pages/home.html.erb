@@ -133,17 +133,28 @@
   <h3>Market Mood</h3>
   <div class="row mood-row">
     <div class="col s4">
-      <img class="home-owner-face" src="http://4.bp.blogspot.com/-kudHVX3lQ9E/VU3XR07CoYI/AAAAAAAAD0o/uEIQKPPzfvs/s1600/risa.png" alt="">
+      <% if @projected_growth_percentage > 0 %>
+      <%= image_tag("happy.jpg", class: "homeowber-face") %>
+      <% else %>
+      <%= image_tag("sad.jpg", class: "homeowner-face") %>
+      <% end %>
       <p>Bill the Home Owner</p>
     </div>
     <div class="col s4">
-      <img class="investor-face" src="http://4.bp.blogspot.com/-kudHVX3lQ9E/VU3XR07CoYI/AAAAAAAAD0o/uEIQKPPzfvs/s1600/risa.png" alt="">
-      <p>Roger the Investor</p>
+      <% if @projected_growth_percentage > 0 %>
+      <%= image_tag("happy.png", class: "investor-face") %>
+      <% else %>
+      <%= image_tag("sad.jpg", class: "investor-face") %>
+      <% end %>
+      <p>Groucho the Investor</p>
     </div>
     <div class="col s4">
-      <img class="renter-face"
-      src="https://image.freepik.com/free-icon/crying-emoticon-face_318-48236.jpg" alt="">
-      <p>Groucho the Renter</p>
+      <% if @projected_growth_percentage > 0 %>
+      <%= image_tag("sad.jpg", class: "renter-face") %>
+      <% else %>
+      <%= image_tag("happy.png", class: "renter-face") %>
+      <% end %>
+      <p>Roger the Renter</p>
     </div>
   </div>
   <!-- ================== end of third row ================ -->
