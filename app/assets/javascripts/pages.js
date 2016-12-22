@@ -297,10 +297,6 @@ $(document).ready(function() {
         //  =========================== Start of Esther's Area ================================
 
 
-        Var ctx = document.getElementById("myBubbleChart");
-        var myBubbleChart = new Chart(ctx, {
-            data = {
-
         var ctx2 = document.getElementById("myBubbleChart");
         var myBubbleChart = new Chart(ctx2, {
             type: 'bubble',
