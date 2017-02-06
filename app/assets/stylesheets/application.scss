@@ -330,3 +330,24 @@ div.logo {
 //   border-style: solid #FF4C65;
 //   float: right;
 // }
+
+
+
+
+@media screen and (max-width: 601px ) {
+  .trends {
+    display: none;
+  }
+
+  .global-third-row{
+    display: none;
+  }
+
+  .evaluation-container {
+    width: 60vw;
+  }
+  .local-row2, .local-row3 {
+    display: none;
+  }
+
+}
