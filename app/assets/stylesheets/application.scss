@@ -346,8 +346,12 @@ div.logo {
   .evaluation-container {
     width: 60vw;
   }
-  .local-row2, .local-row3 {
+  .local-row2, .local-row3, .local-row1 {
     display: none;
+  }
+
+  .your-final-value p {
+  font-size: 1rem;
   }
 
 }
